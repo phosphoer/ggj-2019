@@ -118,6 +118,7 @@ public class PlayerController : MonoBehaviour
   public void HoldItem(InteractablePickUp item)
   {
     heldItem = item;
+    heldItemOriginalParent = heldItem.transform.parent;
     heldItem.transform.SetParent(heldItemRoot, worldPositionStays: true);
     heldItem.transform.localPosition = Vector3.zero;
     heldItem.DisablePhysics();
