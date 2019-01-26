@@ -9,14 +9,18 @@ Shader "Custom/Opaque"
     [Enum(Off,0,On,1)] 
     _ZWrite ("ZWrite", Float) = 1
     
-    [Enum(Always, 0, Less, 2, Equal, 3, LEqual, 4, GEqual, 5)] 
+    [Enum(UnityEngine.Rendering.CompareFunction)] 
     _ZTest ("ZTest", Float) = 4
+
+    [Enum(UnityEngine.Rendering.CullMode)] 
+    _CullMode ("Cull Mode", Float) = 2
   }
   SubShader
   {
     Tags { "RenderType"="Opaque" }
     ZWrite [_ZWrite]
     ZTest [_ZTest]
+    Cull [_CullMode]
     
     Pass
     {
@@ -31,6 +35,7 @@ Shader "Custom/Opaque"
       {
         float4 vertex : POSITION;
         fixed4 color : COLOR;
+        fixed3 normal: NORMAL;
         float2 uv : TEXCOORD0;
       };
 

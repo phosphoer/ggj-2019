@@ -5,8 +5,9 @@ public class InteractablePickUp : Interactable
 {
   private new Rigidbody rigidbody;
 
-  private void Awake()
+  protected override void Awake()
   {
+    base.Awake();
     rigidbody = GetComponent<Rigidbody>();
   }
 
