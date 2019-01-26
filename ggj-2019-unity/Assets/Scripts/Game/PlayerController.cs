@@ -4,11 +4,22 @@ using Rewired;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+  public Rewired.Player PlayerInput
+  {
+    get { return playerInput; }
+    set { playerInput = value; }
+  }
+
+  public Camera Camera => playerCamera;
+
   [SerializeField]
   private Transform headTransform = null;
 
   [SerializeField]
   private Transform heldItemRoot = null;
+
+  [SerializeField]
+  private Camera playerCamera = null;
 
   [SerializeField]
   private float moveSpeed = 1;
@@ -24,6 +35,9 @@ public class PlayerController : MonoBehaviour
 
   [SerializeField]
   private LayerMask interactMask = Physics.DefaultRaycastLayers;
+
+  [SerializeField]
+  private bool debugAutoAssignPlayer = false;
 
   private Rewired.Player playerInput;
   private new Rigidbody rigidbody;
