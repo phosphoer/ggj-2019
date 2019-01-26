@@ -38,6 +38,6 @@ public class DecorItem : MonoBehaviour
       renderer.sharedMaterial = materialInstance;
     }
 
-    materialInstance.SetColor("_ReplacementColor", color.Color);
+    materialInstance.SetColor("_ReplaceWithColor", color.Color);
   }
 }
