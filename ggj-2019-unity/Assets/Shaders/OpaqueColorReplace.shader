@@ -1,10 +1,13 @@
-Shader "Custom/Opaque"
+Shader "Custom/OpaqueColorReplace"
 {
   Properties
   {
     _Color ("Color", Color) = (1,1,1,1)
     _MainTex ("Texture", 2D) = "white" {}
     _FogScale ("Fog Scale", float) = 1
+    _ReplaceColor ("Replace Color", Color) = (1, 0, 1, 1)
+    _ReplaceWithColor ("Replace With Color", Color) = (1, 1, 1, 1)
+    _ReplacementThreshold ("Replacement Threshold", float) = 0.1
 
     [Enum(Off,0,On,1)] 
     _ZWrite ("ZWrite", Float) = 1
@@ -43,8 +46,11 @@ Shader "Custom/Opaque"
       };
 
       sampler2D _MainTex;
-      float4 _Color;
-      float _FogScale;
+      fixed4 _Color;
+      fixed4 _ReplaceColor;
+      fixed4 _ReplaceWithColor;
+      fixed _ReplacementThreshold;
+      fixed _FogScale;
 
       v2f vert (appdata v)
       {
@@ -60,8 +66,14 @@ Shader "Custom/Opaque"
 
       fixed4 frag (v2f i) : SV_Target
       {
-        fixed4 color = _Color * tex2D(_MainTex, i.uv) * i.color;
-        fixed4 fogColor = _Color * tex2D(_MainTex, i.uv) * i.color;
+        fixed4 texColor = tex2D(_MainTex, i.uv);
+        fixed distToReplaceColor = length(_ReplaceColor - texColor);
+        fixed replaceAmount = 1 - saturate(distToReplaceColor / _ReplacementThreshold);
+        fixed4 texColorReplaced = lerp(texColor, _ReplaceWithColor, replaceAmount);
+        fixed4 color = texColorReplaced * _Color * i.color;
+        color.a = 1;
+
+        fixed4 fogColor = color;
         UNITY_APPLY_FOG(i.fogCoord, fogColor);
         return lerp(color, fogColor, _FogScale); 
       }
