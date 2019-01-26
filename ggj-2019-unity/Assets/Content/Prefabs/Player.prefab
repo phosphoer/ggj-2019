@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headTransform: {fileID: 7917163425031703254}
   heldItemRoot: {fileID: 2539643269881373900}
-  moveSpeed: 2
+  moveSpeed: 6
   lookSensitivity: 0.5
   maxLookAngle: 60
   interactRange: 1.5
