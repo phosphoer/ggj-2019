@@ -36,9 +36,6 @@ public class PlayerController : MonoBehaviour
   [SerializeField]
   private LayerMask interactMask = Physics.DefaultRaycastLayers;
 
-  [SerializeField]
-  private bool debugAutoAssignPlayer = false;
-
   private Rewired.Player playerInput;
   private new Rigidbody rigidbody;
   private Interactable focusedItem;
@@ -53,7 +50,10 @@ public class PlayerController : MonoBehaviour
   private void Update()
   {
     if (playerInput == null)
+    {
+      gameObject.SetActive(false);
       return;
+    }
 
     Cursor.visible = false;
     Cursor.lockState = CursorLockMode.Locked;
