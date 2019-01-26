@@ -19,13 +19,13 @@ public class InteractablePickUp : Interactable
   {
     IsInteractable = false;
     rigidbody.isKinematic = true;
-    GetComponent<Collider>().enabled = false;
+    GetComponentInChildren<Collider>().enabled = false;
   }
 
   public void EnablePhysics()
   {
     IsInteractable = true;
     rigidbody.isKinematic = false;
-    GetComponent<Collider>().enabled = true;
+    GetComponentInChildren<Collider>().enabled = true;
   }
 }

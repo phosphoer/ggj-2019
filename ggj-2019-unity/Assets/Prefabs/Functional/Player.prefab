@@ -84,11 +84,10 @@ MonoBehaviour:
   moveSpeed: 6
   lookSensitivity: 0.5
   maxLookAngle: 60
-  interactRange: 1.5
+  interactRange: 2
   interactMask:
     serializedVersion: 2
     m_Bits: 4294967291
-  debugAutoAssignPlayer: 0
 --- !u!54 &6908867774296968237
 Rigidbody:
   m_ObjectHideFlags: 0
