@@ -1,0 +1,406 @@
+fileFormatVersion: 2
+guid: 612edc358ced9a94785aefb73b1e090d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: _ROOT
+    100002: //RootNode
+    100004: Body
+    100006: collar
+    100008: dimms
+    100010: Head
+    100012: HeadManip
+    100014: HipsManip
+    100016: ikHandle1
+    100018: ikHandle2
+    100020: ikHandle3
+    100022: ikHandle4
+    100024: ikHandle5
+    100026: ikHandle6
+    100028: ikHandle7
+    100030: ikHandle8
+    100032: L_Ankle
+    100034: L_Ball
+    100036: L_Elbow
+    100038: L_ElbowPV
+    100040: L_Fngr1_1
+    100042: L_Fngr1_2
+    100044: L_Fngr1_3
+    100046: L_Fngr1_Tip
+    100048: L_Fngr2_1
+    100050: L_Fngr2_2
+    100052: L_Fngr2_3
+    100054: L_Fngr2_Tip
+    100056: L_Fngr3_1
+    100058: L_Fngr3_2
+    100060: L_Fngr3_3
+    100062: L_Fngr3_Tip
+    100064: L_Fngr4_1
+    100066: L_Fngr4_2
+    100068: L_Fngr4_3
+    100070: L_Fngr4_Tip
+    100072: L_FootManip
+    100074: L_Hand
+    100076: L_HandManip
+    100078: L_Hip
+    100080: L_Knee
+    100082: L_KneePV
+    100084: L_RF_Ankle
+    100086: L_RF_Ball
+    100088: L_RF_Heel
+    100090: L_RF_Toe
+    100092: L_ScapManip
+    100094: L_Scapula
+    100096: L_Shoulder
+    100098: L_Thumb1
+    100100: L_Toe
+    100102: L_Tumb2
+    100104: L_Wrist
+    100106: L_WristManip
+    100108: LTumbTip
+    100110: LTumbTip 1
+    100112: Neck
+    100114: NeckManip
+    100116: nurbsCircle1
+    100118: nurbsCircle1 1
+    100120: nurbsCircle10
+    100122: nurbsCircle10 1
+    100124: nurbsCircle11
+    100126: nurbsCircle11 1
+    100128: nurbsCircle12
+    100130: nurbsCircle12 1
+    100132: nurbsCircle13
+    100134: nurbsCircle13 1
+    100136: nurbsCircle14
+    100138: nurbsCircle14 1
+    100140: nurbsCircle15
+    100142: nurbsCircle15 1
+    100144: nurbsCircle16
+    100146: nurbsCircle16 1
+    100148: nurbsCircle17
+    100150: nurbsCircle17 1
+    100152: nurbsCircle18
+    100154: nurbsCircle18 1
+    100156: nurbsCircle19
+    100158: nurbsCircle19 1
+    100160: nurbsCircle20
+    100162: nurbsCircle20 1
+    100164: nurbsCircle4
+    100166: nurbsCircle4 1
+    100168: nurbsCircle7
+    100170: nurbsCircle7 1
+    100172: R_Ankle
+    100174: R_Ball
+    100176: R_Elbow
+    100178: R_ElbowPV
+    100180: R_Fngr1_1
+    100182: R_Fngr1_2
+    100184: R_Fngr1_3
+    100186: R_Fngr1_Tip
+    100188: R_Fngr2_1
+    100190: R_Fngr2_2
+    100192: R_Fngr2_3
+    100194: R_Fngr2_Tip
+    100196: R_Fngr3_1
+    100198: R_Fngr3_2
+    100200: R_Fngr3_3
+    100202: R_Fngr3_Tip
+    100204: R_Fngr4_1
+    100206: R_Fngr4_2
+    100208: R_Fngr4_3
+    100210: R_Fngr4_Tip
+    100212: R_FootManip
+    100214: R_Hand
+    100216: R_HandManip
+    100218: R_Hip
+    100220: R_Knee
+    100222: R_KneePV
+    100224: R_RF_Ankle
+    100226: R_RF_Ball
+    100228: R_RF_Heel
+    100230: R_RF_Toe
+    100232: R_ScapManip
+    100234: R_Scapula
+    100236: R_Shoulder
+    100238: R_Thumb1
+    100240: R_Toe
+    100242: R_Tumb2
+    100244: R_Wrist
+    100246: R_WristManip
+    100248: root
+    100250: Shoe_L
+    100252: Shoe_R
+    100254: shorts
+    100256: Spine2
+    100258: Spine3
+    100260: Spine4
+    100262: Spine_1
+    100264: SpineManip1
+    100266: SpineManip2
+    100268: SpineManip3
+    400000: _ROOT
+    400002: //RootNode
+    400004: Body
+    400006: collar
+    400008: dimms
+    400010: Head
+    400012: HeadManip
+    400014: HipsManip
+    400016: ikHandle1
+    400018: ikHandle2
+    400020: ikHandle3
+    400022: ikHandle4
+    400024: ikHandle5
+    400026: ikHandle6
+    400028: ikHandle7
+    400030: ikHandle8
+    400032: L_Ankle
+    400034: L_Ball
+    400036: L_Elbow
+    400038: L_ElbowPV
+    400040: L_Fngr1_1
+    400042: L_Fngr1_2
+    400044: L_Fngr1_3
+    400046: L_Fngr1_Tip
+    400048: L_Fngr2_1
+    400050: L_Fngr2_2
+    400052: L_Fngr2_3
+    400054: L_Fngr2_Tip
+    400056: L_Fngr3_1
+    400058: L_Fngr3_2
+    400060: L_Fngr3_3
+    400062: L_Fngr3_Tip
+    400064: L_Fngr4_1
+    400066: L_Fngr4_2
+    400068: L_Fngr4_3
+    400070: L_Fngr4_Tip
+    400072: L_FootManip
+    400074: L_Hand
+    400076: L_HandManip
+    400078: L_Hip
+    400080: L_Knee
+    400082: L_KneePV
+    400084: L_RF_Ankle
+    400086: L_RF_Ball
+    400088: L_RF_Heel
+    400090: L_RF_Toe
+    400092: L_ScapManip
+    400094: L_Scapula
+    400096: L_Shoulder
+    400098: L_Thumb1
+    400100: L_Toe
+    400102: L_Tumb2
+    400104: L_Wrist
+    400106: L_WristManip
+    400108: LTumbTip
+    400110: LTumbTip 1
+    400112: Neck
+    400114: NeckManip
+    400116: nurbsCircle1
+    400118: nurbsCircle1 1
+    400120: nurbsCircle10
+    400122: nurbsCircle10 1
+    400124: nurbsCircle11
+    400126: nurbsCircle11 1
+    400128: nurbsCircle12
+    400130: nurbsCircle12 1
+    400132: nurbsCircle13
+    400134: nurbsCircle13 1
+    400136: nurbsCircle14
+    400138: nurbsCircle14 1
+    400140: nurbsCircle15
+    400142: nurbsCircle15 1
+    400144: nurbsCircle16
+    400146: nurbsCircle16 1
+    400148: nurbsCircle17
+    400150: nurbsCircle17 1
+    400152: nurbsCircle18
+    400154: nurbsCircle18 1
+    400156: nurbsCircle19
+    400158: nurbsCircle19 1
+    400160: nurbsCircle20
+    400162: nurbsCircle20 1
+    400164: nurbsCircle4
+    400166: nurbsCircle4 1
+    400168: nurbsCircle7
+    400170: nurbsCircle7 1
+    400172: R_Ankle
+    400174: R_Ball
+    400176: R_Elbow
+    400178: R_ElbowPV
+    400180: R_Fngr1_1
+    400182: R_Fngr1_2
+    400184: R_Fngr1_3
+    400186: R_Fngr1_Tip
+    400188: R_Fngr2_1
+    400190: R_Fngr2_2
+    400192: R_Fngr2_3
+    400194: R_Fngr2_Tip
+    400196: R_Fngr3_1
+    400198: R_Fngr3_2
+    400200: R_Fngr3_3
+    400202: R_Fngr3_Tip
+    400204: R_Fngr4_1
+    400206: R_Fngr4_2
+    400208: R_Fngr4_3
+    400210: R_Fngr4_Tip
+    400212: R_FootManip
+    400214: R_Hand
+    400216: R_HandManip
+    400218: R_Hip
+    400220: R_Knee
+    400222: R_KneePV
+    400224: R_RF_Ankle
+    400226: R_RF_Ball
+    400228: R_RF_Heel
+    400230: R_RF_Toe
+    400232: R_ScapManip
+    400234: R_Scapula
+    400236: R_Shoulder
+    400238: R_Thumb1
+    400240: R_Toe
+    400242: R_Tumb2
+    400244: R_Wrist
+    400246: R_WristManip
+    400248: root
+    400250: Shoe_L
+    400252: Shoe_R
+    400254: shorts
+    400256: Spine2
+    400258: Spine3
+    400260: Spine4
+    400262: Spine_1
+    400264: SpineManip1
+    400266: SpineManip2
+    400268: SpineManip3
+    2100000: lambert1
+    2300000: collar
+    2300002: dimms
+    3300000: collar
+    3300002: dimms
+    4300000: collar
+    4300002: dimms
+    4300004: Body
+    4300006: shorts
+    4300008: Shoe_R
+    4300010: Shoe_L
+    7400000: RunCycle
+    9500000: //RootNode
+    13700000: Body
+    13700002: Shoe_L
+    13700004: Shoe_R
+    13700006: shorts
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: RunCycle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
