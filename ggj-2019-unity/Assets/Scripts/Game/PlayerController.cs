@@ -52,10 +52,9 @@ public class PlayerController : MonoBehaviour
 
   private void Update()
   {
-    if (!Rewired.ReInput.isReady)
+    if (playerInput == null)
       return;
 
-    playerInput = Rewired.ReInput.players.GetPlayer(0);
     Cursor.visible = false;
     Cursor.lockState = CursorLockMode.Locked;
 
