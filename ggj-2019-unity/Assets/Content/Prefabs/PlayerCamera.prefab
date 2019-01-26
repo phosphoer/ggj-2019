@@ -185,4 +185,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputCamera: {fileID: 7521141062708193717}
   outputCamera: {fileID: 7359391110728178281}
-  scaleFactor: 0.2
+  scaleFactor: 0.25
