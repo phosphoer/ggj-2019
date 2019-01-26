@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTransform: {fileID: 7917163425031703254}
-  heldItemRoot: {fileID: 2539643269881373900}
+  heldItemRoot: {fileID: 1926249169248484019}
   playerCamera: {fileID: 7917163424585427838}
   animator: {fileID: 1926249169239184517}
   moveSpeed: 6
@@ -361,6 +361,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bf616783e4e5846e0a406f614e0cd5ea, type: 2}
+    - target: {fileID: 9500000, guid: 612edc358ced9a94785aefb73b1e090d, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 612edc358ced9a94785aefb73b1e090d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -388,6 +392,12 @@ Transform:
 --- !u!95 &1926249169239184517 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 612edc358ced9a94785aefb73b1e090d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1926249169248608741}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1926249169248484019 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400214, guid: 612edc358ced9a94785aefb73b1e090d,
     type: 3}
   m_PrefabInstance: {fileID: 1926249169248608741}
   m_PrefabAsset: {fileID: 0}
