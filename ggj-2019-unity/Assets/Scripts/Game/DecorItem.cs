@@ -1,7 +1,10 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class DecorItem : MonoBehaviour
 {
+  public static IReadOnlyList<DecorItem> Instances => instances;
+
   public DecorColor Color
   {
     get { return color; }
@@ -25,9 +28,21 @@ public class DecorItem : MonoBehaviour
 
   private Material materialInstance;
 
+  private static List<DecorItem> instances = new List<DecorItem>();
+
   private void Awake()
   {
     UpdateMaterial();
+  }
+
+  private void Start()
+  {
+    instances.Add(this);
+  }
+
+  private void OnDestroy()
+  {
+    instances.Remove(this);
   }
 
   private void UpdateMaterial()
