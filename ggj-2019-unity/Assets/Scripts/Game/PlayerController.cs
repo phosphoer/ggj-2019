@@ -5,6 +5,12 @@ using Rewired;
 public class PlayerController : MonoBehaviour
 {
   [SerializeField]
+  private Transform headTransform = null;
+
+  [SerializeField]
+  private Transform heldItemRoot = null;
+
+  [SerializeField]
   private float moveSpeed = 1;
 
   [SerializeField]
@@ -14,11 +20,16 @@ public class PlayerController : MonoBehaviour
   private float maxLookAngle = 60;
 
   [SerializeField]
-  private Transform headTransform = null;
+  private float interactRange = 1.0f;
 
+  [SerializeField]
+  private LayerMask interactMask = Physics.DefaultRaycastLayers;
 
   private Rewired.Player playerInput;
   private new Rigidbody rigidbody;
+  private Interactable focusedItem;
+  private InteractablePickUp heldItem;
+  private Transform heldItemOriginalParent;
 
   private void Awake()
   {
@@ -31,6 +42,8 @@ public class PlayerController : MonoBehaviour
       return;
 
     playerInput = Rewired.ReInput.players.GetPlayer(0);
+    Cursor.visible = false;
+    Cursor.lockState = CursorLockMode.Locked;
 
     // Gather input state
     float walkAxis = playerInput.GetAxis(InputConsts.Action.Walk);
@@ -57,6 +70,81 @@ public class PlayerController : MonoBehaviour
     if (deltaFromMax > 0)
     {
       headTransform.Rotate(deltaFromMax * rotationSign, 0, 0, Space.Self);
+    }
+
+    // Look for interactables
+    RaycastHit raycastHit;
+    Interactable newFocusedInteractable = null;
+    if (Physics.Raycast(headTransform.position, headTransform.forward, out raycastHit, interactRange, interactMask))
+    {
+      // Update the current focused interactable if we hit one
+      Interactable interactable = raycastHit.collider.GetComponentInParent<Interactable>();
+      if (interactable != null && interactable.IsInteractable)
+      {
+        newFocusedInteractable = interactable;
+      }
+    }
+
+    SetFocusedInteractable(newFocusedInteractable);
+
+    // Update focused item 
+    if (focusedItem != null)
+    {
+      // If it becomes un-interactable defocus it 
+      if (!focusedItem.IsInteractable)
+      {
+        SetFocusedInteractable(null);
+        return;
+      }
+
+      // Trigger interactions with focused interactables 
+      if (focusedItem.IsInteractable && isInteractPressed)
+      {
+        focusedItem.TriggerInteraction(this);
+        return;
+      }
+    }
+
+    // Update held item 
+    if (heldItem != null)
+    {
+      if (isInteractPressed)
+      {
+        DropHeldItem();
+      }
+    }
+  }
+
+  public void HoldItem(InteractablePickUp item)
+  {
+    heldItem = item;
+    heldItem.transform.SetParent(heldItemRoot, worldPositionStays: true);
+    heldItem.transform.localPosition = Vector3.zero;
+    heldItem.DisablePhysics();
+  }
+
+  public void DropHeldItem()
+  {
+    if (heldItem != null)
+    {
+      heldItem.transform.SetParent(heldItemOriginalParent, worldPositionStays: true);
+      heldItem.EnablePhysics();
+      heldItem = null;
+    }
+  }
+
+  private void SetFocusedInteractable(Interactable interactable)
+  {
+    if (focusedItem != null)
+    {
+      focusedItem.HideInteractPrompt(this);
+    }
+
+    focusedItem = interactable;
+
+    if (focusedItem != null)
+    {
+      focusedItem.ShowInteractPrompt(this);
     }
   }
 }
