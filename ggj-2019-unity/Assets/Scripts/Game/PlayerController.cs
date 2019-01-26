@@ -131,6 +131,11 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update animation state
+    if (isInteractPressed)
+    {
+      animator.SetTrigger("Hit");
+    }
+
     animator.SetBool("IsWalking", moveVec.sqrMagnitude > 0.1f);
     animator.transform.forward = Mathfx.Damp(animator.transform.forward, flatForward, 0.5f, Time.deltaTime * 5.0f);
   }
