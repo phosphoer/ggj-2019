@@ -14,10 +14,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - Player0Invisible
+  - Player1Invisible
+  - Player2Invisible
+  - Player3Invisible
   - 
   - 
   - 

@@ -48,7 +48,7 @@ public class PlayerManager : MonoBehaviour
 
     // Set up the player viewport 
     splitscreenLayout.AddCamera(player.Camera);
-    defaultCamera.gameObject.SetActive(joinedPlayers.Count > 0);
+    defaultCamera.gameObject.SetActive(joinedPlayers.Count == 0);
   }
 
   private void RemovePlayer(Rewired.Player playerInput)
@@ -60,6 +60,6 @@ public class PlayerManager : MonoBehaviour
 
     // Remove player's camera
     splitscreenLayout.RemoveCamera(player.Camera);
-    defaultCamera.gameObject.SetActive(joinedPlayers.Count > 0);
+    defaultCamera.gameObject.SetActive(joinedPlayers.Count == 0);
   }
 }
