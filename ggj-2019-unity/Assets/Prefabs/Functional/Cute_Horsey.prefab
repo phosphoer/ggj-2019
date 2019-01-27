@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc55168f964414aa8b19036135cd672a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: {fileID: 11400000, guid: 1211bf6ba6f434e4291503f3bbe0fe7f, type: 2}
+  style: {fileID: 11400000, guid: e3f0894ed94a1674b93cad31d8980edf, type: 2}
   color: {fileID: 11400000, guid: 7fcf55de29b064890a04a02a007bcda4, type: 2}
   materialInstance: {fileID: 3158780602162152540}
 --- !u!114 &3158780602162152540
