@@ -130,6 +130,7 @@ public class GameFlow : MonoBehaviour
       roundTimerRoot.transform.localPosition = roundTimer1PlayerRoot.transform.localPosition;
 
     // Loop while round timer is going 
+    bool warned = false;
     for (float timer = roundTime; timer > 0; timer -= Time.deltaTime)
     {
       // Update timer text 
@@ -141,9 +142,11 @@ public class GameFlow : MonoBehaviour
       }
 
       // Time limit warning 
-      if (timer < warnAtTimeLeft)
+      if (!warned && timer < warnAtTimeLeft)
       {
-
+        WarningLight.TurnOn();
+        warned = true;
+        roundTimeText.color = Color.red;
       }
 
       yield return null;

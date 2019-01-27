@@ -63,6 +63,7 @@ public class TVSlideShow : MonoBehaviour
 
   public Coroutine StartOutroSlides()
   {
+    styleSlide.SetActive(false);
     DecorEvaluator parentRoom = GetComponentInParent<DecorEvaluator>();
     if (parentRoom != null)
     {
