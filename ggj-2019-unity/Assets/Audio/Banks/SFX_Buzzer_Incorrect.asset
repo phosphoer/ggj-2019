@@ -17,7 +17,7 @@ MonoBehaviour:
   IsSpatial: 0
   MaxDistance: 100
   MinDistance: 10
-  VolumeScale: 1
+  VolumeScale: 0.5
   PitchOffsetRange:
     MinValue: -0.2
     MaxValue: 0.2

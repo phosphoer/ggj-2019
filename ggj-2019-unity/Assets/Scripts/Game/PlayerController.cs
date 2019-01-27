@@ -181,8 +181,6 @@ public class PlayerController : MonoBehaviour
       heldItem.transform.SetParent(heldItemRoot, worldPositionStays: true);
       heldItem.transform.localPosition = Vector3.zero;
       heldItem.DisablePhysics();
-
-      AudioManager.Instance.PlaySound(sfxInteract);
     }
   }
 
@@ -199,8 +197,6 @@ public class PlayerController : MonoBehaviour
       heldItem.transform.SetParent(heldItemOriginalParent, worldPositionStays: true);
       heldItem.EnablePhysics();
       heldItem = null;
-
-      AudioManager.Instance.PlaySound(sfxInteract);
     }
   }
 
@@ -228,6 +224,8 @@ public class PlayerController : MonoBehaviour
 
   private IEnumerator PickUpAnim()
   {
+    AudioManager.Instance.PlaySound(sfxInteract);
+
     yield return new WaitForSeconds(0.25f);
 
     if (focusedItem != null)
@@ -238,6 +236,8 @@ public class PlayerController : MonoBehaviour
 
   private IEnumerator PutDownAnim()
   {
+    AudioManager.Instance.PlaySound(sfxInteract);
+
     yield return new WaitForSeconds(0.25f);
     DropHeldItem();
   }
