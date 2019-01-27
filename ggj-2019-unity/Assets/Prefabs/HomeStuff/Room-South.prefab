@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1261855311026298408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5243868669814626929}
+  m_Layer: 0
+  m_Name: BoundsA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5243868669814626929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261855311026298408}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 27.7, y: 13.27, z: 18.9}
+  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 2002758439124452766}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2002758437153816871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,6 +1906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2002758439124452766}
+  - component: {fileID: 561391914629574609}
   m_Layer: 0
   m_Name: Room-South
   m_TagString: Untagged
@@ -1898,9 +1929,25 @@ Transform:
   - {fileID: 2002758438192217630}
   - {fileID: 2002758437802485422}
   - {fileID: 2002758437608414416}
+  - {fileID: 5243868669814626929}
+  - {fileID: 4667330307691655188}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &561391914629574609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002758439124452753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28fb24f67afd4a26938b2873810ec05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundsCornerA: {fileID: 5243868669814626929}
+  boundsCornerB: {fileID: 4667330307691655188}
 --- !u!1 &2002758439217325300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,6 +1992,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7836304, y: 2.6569014, z: 2.2202682}
   m_Center: {x: -0.19356346, y: 0.103556156, z: -0.2744856}
+--- !u!1 &2920190907801209294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4667330307691655188}
+  m_Layer: 0
+  m_Name: BoundsB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4667330307691655188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920190907801209294}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -13.9, y: 23.1, z: -23.4}
+  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
+  m_Children: []
+  m_Father: {fileID: 2002758439124452766}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2002758437134529456
 PrefabInstance:
   m_ObjectHideFlags: 0
