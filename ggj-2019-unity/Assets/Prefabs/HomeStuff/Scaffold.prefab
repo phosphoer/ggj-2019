@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4243500498615280908}
   - component: {fileID: 3623708078520371410}
   - component: {fileID: 8116851461638689339}
-  - component: {fileID: 4385299712639440011}
+  - component: {fileID: 6564282336542112866}
   m_Layer: 0
   m_Name: Scaffold
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4385299712639440011
+--- !u!65 &6564282336542112866
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,5 +89,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5904509, y: 10.065069, z: 0.59510565}
-  m_Center: {x: -0.25477457, y: 4.9912415, z: 0.25}
+  m_Size: {x: 1.1809018, y: 20.130138, z: 1.1902113}
+  m_Center: {x: -0.50954914, y: 9.982483, z: 0.5}
