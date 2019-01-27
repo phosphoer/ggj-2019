@@ -49,6 +49,9 @@ public class PlayerController : MonoBehaviour
   private AnimationCurve slapHeadRollAnim = null;
 
   [SerializeField]
+  private GameObject fxSlapPrefab = null;
+
+  [SerializeField]
   private SoundBank sfxSlap = null;
 
   [SerializeField]
@@ -267,6 +270,9 @@ public class PlayerController : MonoBehaviour
         {
           rb.AddExplosionForce(150, heldItemRoot.position, 2.0f, 0.25f, ForceMode.Impulse);
           AudioManager.Instance.PlaySound(sfxSlap);
+
+          GameObject slapFx = Instantiate(fxSlapPrefab);
+          slapFx.transform.position = heldItemRoot.position;
 
           PlayerController player = rb.GetComponent<PlayerController>();
           if (player != null)

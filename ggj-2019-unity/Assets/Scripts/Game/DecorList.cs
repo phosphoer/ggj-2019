@@ -8,4 +8,7 @@ public class DecorList : ScriptableObject
   public DecorItem[] DecorItems;
   public SoundBank CorrectSound;
   public SoundBank IncorrectSound;
+  public GameObject FxCorrect1Prefab;
+  public GameObject FxCorrect2Prefab;
+  public GameObject FxIncorrectPrefab;
 }
