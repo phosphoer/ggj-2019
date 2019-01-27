@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialInstance: {fileID: 5118162267090410958}
+  holdScaleFactor: 0.5
 --- !u!114 &1033677516744895385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,10 +114,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6111162598939820213}
     m_Modifications:
-    - target: {fileID: 2300002, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 78af055d4b265463ab7fd64b3d81f6d9, type: 2}
     - target: {fileID: 100000, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_Name
       value: Candelabra
@@ -135,11 +132,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.13105227
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_LocalRotation.z
@@ -147,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99137545
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_RootOrder
@@ -159,12 +156,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -15.061001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 78af055d4b265463ab7fd64b3d81f6d9, type: 2}
     - target: {fileID: 2300004, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialInstance: {fileID: 5118162267090410958}
+  holdScaleFactor: 0.5
 --- !u!114 &1033677516744895385
 MonoBehaviour:
   m_ObjectHideFlags: 0
