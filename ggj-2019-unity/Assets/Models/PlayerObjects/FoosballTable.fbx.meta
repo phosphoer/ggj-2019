@@ -16,6 +16,11 @@ ModelImporter:
     100020: polySurface20
     100022: polySurface21
     100024: polySurface22
+    100026: ColorMesh
+    100028: polySurface29
+    100030: polySurface30
+    100032: polySurface32
+    100034: polySurface34
     400000: //RootNode
     400002: pCube15
     400004: pCube38
@@ -29,6 +34,11 @@ ModelImporter:
     400020: polySurface20
     400022: polySurface21
     400024: polySurface22
+    400026: ColorMesh
+    400028: polySurface29
+    400030: polySurface30
+    400032: polySurface32
+    400034: polySurface34
     2300000: pCube15
     2300002: pCube38
     2300004: pCylinder10
@@ -41,6 +51,11 @@ ModelImporter:
     2300018: polySurface20
     2300020: polySurface21
     2300022: polySurface22
+    2300024: ColorMesh
+    2300026: polySurface29
+    2300028: polySurface30
+    2300030: polySurface32
+    2300032: polySurface34
     3300000: pCube15
     3300002: pCube38
     3300004: pCylinder10
@@ -53,6 +68,11 @@ ModelImporter:
     3300018: polySurface20
     3300020: polySurface21
     3300022: polySurface22
+    3300024: ColorMesh
+    3300026: polySurface29
+    3300028: polySurface30
+    3300030: polySurface32
+    3300032: polySurface34
     4300000: pCube15
     4300002: pCube38
     4300004: polySurface20
@@ -65,6 +85,11 @@ ModelImporter:
     4300018: pCylinder15
     4300020: polySurface21
     4300022: polySurface22
+    4300024: polySurface29
+    4300026: polySurface30
+    4300028: polySurface32
+    4300030: polySurface34
+    4300032: ColorMesh
   externalObjects: {}
   materials:
     importMaterials: 0
