@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
   private Camera defaultCamera = null;
 
   private SplitscreenLayout splitscreenLayout = new SplitscreenLayout();
+  private List<PlayerController> notJoinedPlayers = new List<PlayerController>();
   private List<PlayerController> joinedPlayers = new List<PlayerController>();
   private List<Rewired.Player> joinedPlayerInputs = new List<Rewired.Player>();
 
@@ -23,6 +24,7 @@ public class PlayerManager : MonoBehaviour
   {
     Instance = this;
     defaultCamera.gameObject.SetActive(true);
+    notJoinedPlayers.AddRange(players);
     foreach (PlayerController player in players)
     {
       player.gameObject.SetActive(false);
@@ -65,9 +67,10 @@ public class PlayerManager : MonoBehaviour
   private void AddPlayer(Rewired.Player playerInput)
   {
     // Activate the player object and mark the joined state
-    PlayerController player = players[joinedPlayers.Count];
+    PlayerController player = notJoinedPlayers[Random.Range(0, notJoinedPlayers.Count)];
     joinedPlayers.Add(player);
     joinedPlayerInputs.Add(playerInput);
+    notJoinedPlayers.Remove(player);
     player.PlayerInput = playerInput;
     player.gameObject.SetActive(true);
 
@@ -103,6 +106,7 @@ public class PlayerManager : MonoBehaviour
     {
       joinedPlayers.Remove(player);
       joinedPlayerInputs.Remove(playerInput);
+      notJoinedPlayers.Add(player);
       player.gameObject.SetActive(false);
 
       // Remove player's camera

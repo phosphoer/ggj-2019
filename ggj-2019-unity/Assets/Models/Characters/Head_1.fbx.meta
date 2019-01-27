@@ -7,19 +7,115 @@ ModelImporter:
     100002: pCylinder3
     100004: pCylinder5
     100006: pPlane4
+    100008: Head
+    100010: Head 1
+    100012: Lip
+    100014: Lips
+    100016: LowerLipManip
+    100018: LowerTeeth
+    100020: Root
+    100022: UpperLipManip
+    100024: UpperTeeth
+    100026: L_eye
+    100028: R_eye
+    100030: Cap_1
+    100032: Cap_2
+    100034: Cap_3
+    100036: Cap_4
+    100038: Cap_5
+    100040: Cap_6
+    100042: Cap_7
+    100044: Cap_8
+    100046: capManip
+    100048: ikHandle11
+    100050: ikHandle12
+    100052: ikHandle13
+    100054: L_Eyebrow1
+    100056: L_Tenticle_1
+    100058: L_Tenticle_2
+    100060: L_Tenticle_3
+    100062: L_Tenticle_4
+    100064: nurbsCircle25
+    100066: nurbsCircle26
+    100068: nurbsCircle27
+    100070: nurbsCircle28
+    100072: R_Eyebrow1
+    100074: R_Tenticle_1
+    100076: R_Tenticle_2
+    100078: R_Tenticle_3
+    100080: R_Tenticle_4
     400000: //RootNode
     400002: pCylinder3
     400004: pCylinder5
     400006: pPlane4
+    400008: Head
+    400010: Head 1
+    400012: Lip
+    400014: Lips
+    400016: LowerLipManip
+    400018: LowerTeeth
+    400020: Root
+    400022: UpperLipManip
+    400024: UpperTeeth
+    400026: L_eye
+    400028: R_eye
+    400030: Cap_1
+    400032: Cap_2
+    400034: Cap_3
+    400036: Cap_4
+    400038: Cap_5
+    400040: Cap_6
+    400042: Cap_7
+    400044: Cap_8
+    400046: capManip
+    400048: ikHandle11
+    400050: ikHandle12
+    400052: ikHandle13
+    400054: L_Eyebrow1
+    400056: L_Tenticle_1
+    400058: L_Tenticle_2
+    400060: L_Tenticle_3
+    400062: L_Tenticle_4
+    400064: nurbsCircle25
+    400066: nurbsCircle26
+    400068: nurbsCircle27
+    400070: nurbsCircle28
+    400072: R_Eyebrow1
+    400074: R_Tenticle_1
+    400076: R_Tenticle_2
+    400078: R_Tenticle_3
+    400080: R_Tenticle_4
     2300000: pCylinder3
     2300002: pCylinder5
     2300004: pPlane4
+    2300006: Head
+    2300008: Lips
+    2300010: LowerTeeth
+    2300012: UpperTeeth
+    2300014: L_eye
+    2300016: R_eye
     3300000: pCylinder3
     3300002: pCylinder5
     3300004: pPlane4
+    3300006: Head
+    3300008: Lips
+    3300010: LowerTeeth
+    3300012: UpperTeeth
+    3300014: L_eye
+    3300016: R_eye
     4300000: pCylinder5
     4300002: pCylinder3
     4300004: pPlane4
+    4300006: Head
+    4300008: Lips
+    4300010: UpperTeeth
+    4300012: LowerTeeth
+    4300014: L_eye
+    4300016: R_eye
+    7400000: Idle
+    7400002: Twitch1
+    9500000: //RootNode
+    13700000: pPlane4
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -40,14 +136,70 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 49
+      lastFrame: 73
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Twitch1
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -72,8 +224,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -100,7 +252,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
