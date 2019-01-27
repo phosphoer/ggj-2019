@@ -6,7 +6,10 @@ using TMPro;
 public class TVSlideShow : MonoBehaviour
 {
   [SerializeField]
-  private Transform slideShowRoot = null;
+  private Transform slideShowIntro = null;
+
+  [SerializeField]
+  private Transform slideShowOutro = null;
 
   [SerializeField]
   private float slideTiming = 3.0f;
@@ -20,15 +23,23 @@ public class TVSlideShow : MonoBehaviour
   [SerializeField]
   private TMP_Text color2NameText = null;
 
+  [SerializeField]
+  private TMP_Text scoreText = null;
+
   private void Awake()
   {
-    foreach (Transform slideShowItem in slideShowRoot)
+    foreach (Transform slideShowItem in slideShowIntro)
+    {
+      slideShowItem.gameObject.SetActive(false);
+    }
+
+    foreach (Transform slideShowItem in slideShowOutro)
     {
       slideShowItem.gameObject.SetActive(false);
     }
   }
 
-  public Coroutine StartSlideShow()
+  public Coroutine StartIntroSlides()
   {
     DecorEvaluator parentRoom = GetComponentInParent<DecorEvaluator>();
     if (parentRoom != null)
@@ -44,12 +55,27 @@ public class TVSlideShow : MonoBehaviour
       Debug.LogError("TV was not under a decor evaluator", this);
     }
 
-    return StartCoroutine(SlideShowRoutine());
+    return StartCoroutine(SlideShowRoutine(slideShowIntro));
   }
 
-  private IEnumerator SlideShowRoutine()
+  public Coroutine StartOutroSlides()
   {
-    foreach (Transform slideShowItem in slideShowRoot)
+    DecorEvaluator parentRoom = GetComponentInParent<DecorEvaluator>();
+    if (parentRoom != null)
+    {
+      scoreText.text = parentRoom.CalculateTotalScore().ToString();
+    }
+    else
+    {
+      Debug.LogError("TV was not under a decor evaluator", this);
+    }
+
+    return StartCoroutine(SlideShowRoutine(slideShowOutro));
+  }
+
+  private IEnumerator SlideShowRoutine(Transform slidesRoot)
+  {
+    foreach (Transform slideShowItem in slidesRoot)
     {
       slideShowItem.gameObject.SetActive(true);
 

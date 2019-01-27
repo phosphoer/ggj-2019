@@ -49,10 +49,20 @@ public class PlayerController : MonoBehaviour
   private Interactable focusedItem;
   private InteractablePickUp heldItem;
   private Transform heldItemOriginalParent;
+  private Vector3 startPosition;
+  private Quaternion startRotation;
+  private Quaternion startHeadRotation;
 
   private void Awake()
   {
     rigidbody = GetComponent<Rigidbody>();
+  }
+
+  private void Start()
+  {
+    startPosition = transform.position;
+    startRotation = transform.rotation;
+    startHeadRotation = headTransform.rotation;
   }
 
   private void Update()
@@ -147,13 +157,22 @@ public class PlayerController : MonoBehaviour
     }
   }
 
+  public void ResetToStartPosition()
+  {
+    transform.SetPositionAndRotation(startPosition, startRotation);
+    headTransform.rotation = startHeadRotation;
+  }
+
   public void HoldItem(InteractablePickUp item)
   {
-    heldItem = item;
-    heldItemOriginalParent = heldItem.transform.parent;
-    heldItem.transform.SetParent(heldItemRoot, worldPositionStays: true);
-    heldItem.transform.localPosition = Vector3.zero;
-    heldItem.DisablePhysics();
+    if (heldItem == null)
+    {
+      heldItem = item;
+      heldItemOriginalParent = heldItem.transform.parent;
+      heldItem.transform.SetParent(heldItemRoot, worldPositionStays: true);
+      heldItem.transform.localPosition = Vector3.zero;
+      heldItem.DisablePhysics();
+    }
   }
 
   public void DropHeldItem()
