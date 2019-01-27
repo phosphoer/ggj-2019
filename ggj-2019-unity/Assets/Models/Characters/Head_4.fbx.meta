@@ -1,0 +1,257 @@
+fileFormatVersion: 2
+guid: 5873541853f5e9f429b5530f41794156
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Head
+    100002: //RootNode
+    100004: HeadManip
+    100006: ikHandle10
+    100008: LowerJaw
+    100010: lowerJaw
+    100012: LowerJawManip
+    100014: LowerJawTip
+    100016: mouthCap
+    100018: MouthHinge
+    100020: neck
+    100022: Neck_10
+    100024: Neck_11
+    100026: Neck_12
+    100028: Neck_13
+    100030: Neck_14
+    100032: Neck_15
+    100034: Neck_16
+    100036: Neck_17
+    100038: Neck_18
+    100040: Neck_2
+    100042: Neck_3
+    100044: Neck_4
+    100046: Neck_5
+    100048: Neck_6
+    100050: Neck_7
+    100052: Neck_8
+    100054: Neck_9
+    100056: NeckManip
+    100058: NeckPV
+    100060: Root
+    100062: UpperJaw
+    100064: upperJaw
+    100066: UpperJawManip
+    100068: UpperJawTip
+    400000: Head
+    400002: //RootNode
+    400004: HeadManip
+    400006: ikHandle10
+    400008: LowerJaw
+    400010: lowerJaw
+    400012: LowerJawManip
+    400014: LowerJawTip
+    400016: mouthCap
+    400018: MouthHinge
+    400020: neck
+    400022: Neck_10
+    400024: Neck_11
+    400026: Neck_12
+    400028: Neck_13
+    400030: Neck_14
+    400032: Neck_15
+    400034: Neck_16
+    400036: Neck_17
+    400038: Neck_18
+    400040: Neck_2
+    400042: Neck_3
+    400044: Neck_4
+    400046: Neck_5
+    400048: Neck_6
+    400050: Neck_7
+    400052: Neck_8
+    400054: Neck_9
+    400056: NeckManip
+    400058: NeckPV
+    400060: Root
+    400062: UpperJaw
+    400064: upperJaw
+    400066: UpperJawManip
+    400068: UpperJawTip
+    4300000: neck
+    4300002: upperJaw
+    4300004: lowerJaw
+    4300006: mouthCap
+    7400000: Idle
+    7400002: Twitch1
+    7400004: Twitch2
+    9500000: //RootNode
+    13700000: lowerJaw
+    13700002: mouthCap
+    13700004: neck
+    13700006: upperJaw
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Twitch1
+      takeName: Take 001
+      firstFrame: 49
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Twitch2
+      takeName: Take 001
+      firstFrame: 73
+      lastFrame: 85
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
