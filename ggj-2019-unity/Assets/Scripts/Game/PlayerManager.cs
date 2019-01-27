@@ -48,6 +48,20 @@ public class PlayerManager : MonoBehaviour
     }
   }
 
+  public bool IsAnyPlayerPressingButton()
+  {
+    for (int i = 0; i < Rewired.ReInput.players.playerCount; ++i)
+    {
+      Rewired.Player playerInput = Rewired.ReInput.players.GetPlayer(i);
+      if (playerInput.GetButtonDown(InputConsts.Action.Interact))
+      {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   private void AddPlayer(Rewired.Player playerInput)
   {
     // Activate the player object and mark the joined state
