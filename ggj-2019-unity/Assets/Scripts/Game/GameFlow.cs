@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameFlow : MonoBehaviour
@@ -10,12 +11,36 @@ public class GameFlow : MonoBehaviour
   [SerializeField]
   private float warnAtTimeLeft = 15.0f;
 
+  [SerializeField]
+  private GameObject waitingForPlayersPrompt = null;
+
+  [SerializeField]
+  private GameObject startGamePrompt = null;
+
+  [SerializeField]
+  private GameObject roundTimerRoot = null;
+
+  [SerializeField]
+  private Transform roundTimer1PlayerRoot = null;
+
+  [SerializeField]
+  private Text roundTimeText = null;
+
+  private int lastRoundedTime;
+
+  private void Awake()
+  {
+    waitingForPlayersPrompt.SetActive(false);
+    startGamePrompt.SetActive(false);
+    roundTimerRoot.SetActive(false);
+  }
+
   private IEnumerator Start()
   {
     yield return StartCoroutine(JoinState());
     yield return StartCoroutine(IntroState());
     yield return StartCoroutine(GameState());
-    yield return StartCoroutine(GameState());
+    yield return StartCoroutine(EndState());
   }
 
   private IEnumerator JoinState()
@@ -24,6 +49,7 @@ public class GameFlow : MonoBehaviour
     Cursor.lockState = CursorLockMode.Locked;
 
     // Wait for a minimum number of players to join
+    waitingForPlayersPrompt.SetActive(true);
     PlayerManager.PlayerJoined += OnPlayerJoined;
     while (PlayerManager.Instance.JoinedPlayers.Count == 0)
     {
@@ -31,6 +57,8 @@ public class GameFlow : MonoBehaviour
     }
 
     // Wait for someone to press start 
+    waitingForPlayersPrompt.SetActive(false);
+    startGamePrompt.SetActive(true);
     bool startPressed = false;
     while (!startPressed)
     {
@@ -45,6 +73,7 @@ public class GameFlow : MonoBehaviour
       yield return null;
     }
 
+    startGamePrompt.SetActive(false);
     PlayerManager.PlayerJoined -= OnPlayerJoined;
 
     yield return null;
@@ -63,9 +92,22 @@ public class GameFlow : MonoBehaviour
       player.ControlsEnabled = true;
     }
 
-    // Count down round timer 
+    // Show round timer
+    roundTimerRoot.SetActive(true);
+    if (PlayerManager.Instance.JoinedPlayers.Count == 1)
+      roundTimerRoot.transform.localPosition = roundTimer1PlayerRoot.transform.localPosition;
+
+    // Loop while round timer is going 
     for (float timer = roundTime; timer > 0; timer -= Time.deltaTime)
     {
+      // Update timer text 
+      int roundedTime = Mathf.RoundToInt(timer);
+      if (roundedTime != lastRoundedTime)
+      {
+        lastRoundedTime = roundedTime;
+        roundTimeText.text = roundedTime.ToString();
+      }
+
       // Time limit warning 
       if (timer < warnAtTimeLeft)
       {
@@ -77,6 +119,7 @@ public class GameFlow : MonoBehaviour
 
     // End of round 
     // Disable everyone's controls
+    roundTimerRoot.SetActive(false);
     foreach (PlayerController player in PlayerManager.Instance.JoinedPlayers)
     {
       player.ControlsEnabled = false;
@@ -92,6 +135,8 @@ public class GameFlow : MonoBehaviour
     yield return null;
 
     // Reload scene
+    // yield return SceneManager.UnloadSceneAsync(gameObject.scene.name);
+    // yield return null;
     SceneManager.LoadScene(gameObject.scene.name, LoadSceneMode.Single);
   }
 
