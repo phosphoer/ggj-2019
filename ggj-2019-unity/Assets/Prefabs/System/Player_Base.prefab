@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7917163425538301684}
   - component: {fileID: 6908867774296968237}
   m_Layer: 0
-  m_Name: Player_Headless
+  m_Name: Player_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,6 +90,30 @@ MonoBehaviour:
   interactMask:
     serializedVersion: 2
     m_Bits: 4294967291
+  slapHeadRollAnim:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!54 &6908867774296968237
 Rigidbody:
   m_ObjectHideFlags: 0

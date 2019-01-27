@@ -1,5 +1,6 @@
 using UnityEngine;
 using Rewired;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -44,6 +45,9 @@ public class PlayerController : MonoBehaviour
   [SerializeField]
   private LayerMask interactMask = Physics.DefaultRaycastLayers;
 
+  [SerializeField]
+  private AnimationCurve slapHeadRollAnim = null;
+
   private Rewired.Player playerInput;
   private new Rigidbody rigidbody;
   private Interactable focusedItem;
@@ -52,6 +56,7 @@ public class PlayerController : MonoBehaviour
   private Vector3 startPosition;
   private Quaternion startRotation;
   private Quaternion startHeadRotation;
+  private bool isSlapCancelled;
 
   private void Awake()
   {
@@ -67,13 +72,7 @@ public class PlayerController : MonoBehaviour
 
   private void Update()
   {
-    if (playerInput == null)
-    {
-      gameObject.SetActive(false);
-      return;
-    }
-
-    if (!ControlsEnabled)
+    if (playerInput == null || !ControlsEnabled)
     {
       return;
     }
@@ -108,7 +107,9 @@ public class PlayerController : MonoBehaviour
     // Update animation state
     if (isInteractPressed)
     {
+      isSlapCancelled = false;
       animator.SetTrigger("Hit");
+      StartCoroutine(SlapAnim());
     }
 
     animator.SetBool("IsWalking", moveVec.sqrMagnitude > 0.1f);
@@ -142,7 +143,8 @@ public class PlayerController : MonoBehaviour
       // Trigger interactions with focused interactables 
       if (focusedItem.IsInteractable && isInteractPressed)
       {
-        focusedItem.TriggerInteraction(this);
+        StartCoroutine(PickUpAnim());
+        isSlapCancelled = true;
         return;
       }
     }
@@ -152,7 +154,8 @@ public class PlayerController : MonoBehaviour
     {
       if (isInteractPressed)
       {
-        DropHeldItem();
+        StartCoroutine(PutDownAnim());
+        isSlapCancelled = true;
       }
     }
   }
@@ -185,6 +188,13 @@ public class PlayerController : MonoBehaviour
     }
   }
 
+  public void ReceiveSlap()
+  {
+    animator.SetTrigger("Recoil");
+    DropHeldItem();
+    StartCoroutine(GotSlappedAnim());
+  }
+
   private void SetFocusedInteractable(Interactable interactable)
   {
     if (focusedItem != null)
@@ -197,6 +207,57 @@ public class PlayerController : MonoBehaviour
     if (focusedItem != null)
     {
       focusedItem.ShowInteractPrompt(this);
+    }
+  }
+
+  private IEnumerator PickUpAnim()
+  {
+    yield return new WaitForSeconds(0.25f);
+
+    if (focusedItem != null)
+    {
+      focusedItem.TriggerInteraction(this);
+    }
+  }
+
+  private IEnumerator PutDownAnim()
+  {
+    yield return new WaitForSeconds(0.25f);
+    DropHeldItem();
+  }
+
+  private IEnumerator GotSlappedAnim()
+  {
+    const float duration = 0.5f;
+    for (float timer = 0; timer < duration; timer += Time.deltaTime)
+    {
+      float headRoll = slapHeadRollAnim.Evaluate(timer / duration);
+      headTransform.Rotate(headRoll, headRoll * 0.5f, 0, Space.Self);
+      yield return null;
+    }
+  }
+
+  private IEnumerator SlapAnim()
+  {
+    yield return new WaitForSeconds(0.25f);
+
+    if (!isSlapCancelled && heldItem == null)
+    {
+      Collider[] colliders = Physics.OverlapSphere(heldItemRoot.position, 0.5f);
+      foreach (Collider col in colliders)
+      {
+        Rigidbody rb = col.GetComponentInParent<Rigidbody>();
+        if (rb != null && rb != rigidbody)
+        {
+          rb.AddExplosionForce(150, heldItemRoot.position, 2.0f, 2.0f, ForceMode.Impulse);
+
+          PlayerController player = rb.GetComponent<PlayerController>();
+          if (player != null)
+          {
+            player.ReceiveSlap();
+          }
+        }
+      }
     }
   }
 }
