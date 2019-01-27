@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40c2a79ea60854740a4050b5cecb89b5, type: 3}
-  m_Name: Style_Cute
+  m_Name: Style_Sports
   m_EditorClassIdentifier: 
-  Name: Cute
+  Name: Science
