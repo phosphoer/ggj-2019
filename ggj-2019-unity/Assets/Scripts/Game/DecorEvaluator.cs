@@ -1,7 +1,13 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class DecorEvaluator : MonoBehaviour
 {
+  public static IReadOnlyList<DecorEvaluator> Instances => instances;
+
+  public DecorStyle DesiredStyle { get; set; }
+  public List<DecorColor> DesiredColors { get; set; } = new List<DecorColor>();
+
   [SerializeField]
   private Transform boundsCornerA = null;
 
@@ -9,6 +15,18 @@ public class DecorEvaluator : MonoBehaviour
   private Transform boundsCornerB = null;
 
   private int evaluateIndex;
+
+  private static List<DecorEvaluator> instances = new List<DecorEvaluator>();
+
+  private void Awake()
+  {
+    instances.Add(this);
+  }
+
+  private void OnDestroy()
+  {
+    instances.Remove(this);
+  }
 
   private void Update()
   {
