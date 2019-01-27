@@ -60,6 +60,8 @@ ModelImporter:
     100108: SkullEyes1
     100110: platform1
     100112: Skulls
+    100114: polySurface29
+    100116: Stand
     400000: pCylinder2
     400002: pSphere3
     400004: pSphere3 1
@@ -117,6 +119,8 @@ ModelImporter:
     400108: SkullEyes1
     400110: platform1
     400112: Skulls
+    400114: polySurface29
+    400116: Stand
     2300000: pSphere3
     2300002: pSphere3 1
     2300004: pSphere3 2
@@ -155,6 +159,8 @@ ModelImporter:
     2300070: SkullEyes1
     2300072: platform1
     2300074: Skulls
+    2300076: polySurface29
+    2300078: Stand
     3300000: pSphere3
     3300002: pSphere3 1
     3300004: pSphere3 2
@@ -193,6 +199,8 @@ ModelImporter:
     3300070: SkullEyes1
     3300072: platform1
     3300074: Skulls
+    3300076: polySurface29
+    3300078: Stand
     4300000: Skull_LowPoly
     4300002: pSphere3
     4300004: Skull_LowPoly1
@@ -231,6 +239,9 @@ ModelImporter:
     4300070: SkullEyes1
     4300072: Skulls
     4300074: platform1
+    4300076: polySurface29
+    4300078: polySurface30
+    4300080: Stand
   externalObjects: {}
   materials:
     importMaterials: 0
