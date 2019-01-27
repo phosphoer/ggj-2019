@@ -83,6 +83,7 @@ public class GameFlow : MonoBehaviour
 
   private IEnumerator IntroState()
   {
+    // Start TV intros and wait for them to complete
     TVSlideShow[] slideShows = FindObjectsOfType<TVSlideShow>();
     Coroutine waitRoutine = null;
     foreach (TVSlideShow slideShow in slideShows)
