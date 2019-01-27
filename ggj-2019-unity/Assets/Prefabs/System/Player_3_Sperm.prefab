@@ -700,6 +700,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 5366290540084843481}
+    - target: {fileID: 7917163424585427838, guid: 1dfbaa0476d504cf0804a38f3d0717cd,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 3895
+      objectReference: {fileID: 0}
     - target: {fileID: 7582612983305908635, guid: 1dfbaa0476d504cf0804a38f3d0717cd,
         type: 3}
       propertyPath: inputCamera
