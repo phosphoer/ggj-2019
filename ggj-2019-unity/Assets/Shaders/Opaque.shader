@@ -42,6 +42,7 @@ Shader "Custom/Opaque"
       struct v2f
       {
         float4 pos : SV_POSITION;
+        float3 normal : NORMAL;
         fixed4 color : COLOR;
         float2 uv : TEXCOORD0;
         UNITY_FOG_COORDS(1)
@@ -55,6 +56,7 @@ Shader "Custom/Opaque"
       {
         v2f o;
         o.pos = UnityObjectToClipPos(v.vertex);
+        o.normal = UnityObjectToWorldNormal(v.normal);
         o.uv = v.uv;
         o.color = v.color;
 

@@ -8,6 +8,7 @@ Shader "Custom/OpaqueColorReplace"
     _ReplaceColor ("Replace Color", Color) = (1, 0, 1, 1)
     _ReplaceWithColor ("Replace With Color", Color) = (1, 1, 1, 1)
     _ReplacementThreshold ("Replacement Threshold", float) = 0.1
+    _HighlightColor ("Highlight Color", Color) = (0, 0, 0, 0)
 
     [Enum(Off,0,On,1)] 
     _ZWrite ("ZWrite", Float) = 1
@@ -37,22 +38,27 @@ Shader "Custom/OpaqueColorReplace"
       struct appdata
       {
         float4 vertex : POSITION;
+        fixed3 normal: NORMAL;
         fixed4 color : COLOR;
         float2 uv : TEXCOORD0;
+        float3 worldPos : TEXCOORD1;
       };
 
       struct v2f
       {
         float4 pos : SV_POSITION;
+        fixed3 worldNormal: NORMAL;
         fixed4 color : COLOR;
         float2 uv : TEXCOORD0;
-        UNITY_FOG_COORDS(1)
+        float3 worldPos : TEXCOORD2;
+        UNITY_FOG_COORDS(2)
       };
 
       sampler2D _MainTex;
       fixed4 _Color;
       fixed4 _ReplaceColor;
       fixed4 _ReplaceWithColor;
+      fixed4 _HighlightColor;
       fixed _ReplacementThreshold;
       fixed _FogScale;
 
@@ -60,6 +66,8 @@ Shader "Custom/OpaqueColorReplace"
       {
         v2f o;
         o.pos = UnityObjectToClipPos(v.vertex);
+        o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+        o.worldNormal = UnityObjectToWorldNormal(v.normal);
         o.uv = v.uv;
         o.color = v.color;
 
@@ -76,6 +84,7 @@ Shader "Custom/OpaqueColorReplace"
         fixed4 texColorReplaced = lerp(texColor, _ReplaceWithColor, replaceAmount);
         fixed4 color = texColorReplaced * _Color * i.color;
         color.a = 1;
+        color.rgb += _HighlightColor.rgb;
 
         fixed4 fogColor = color;
         UNITY_APPLY_FOG(i.fogCoord, fogColor);
