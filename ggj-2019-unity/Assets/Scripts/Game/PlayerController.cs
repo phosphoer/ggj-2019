@@ -208,6 +208,9 @@ public class PlayerController : MonoBehaviour
     animator.SetTrigger("Recoil");
     DropHeldItem();
     StartCoroutine(GotSlappedAnim());
+
+    GameObject slapFx = Instantiate(fxSlapPrefab);
+    slapFx.transform.position = headTransform.position;
   }
 
   private void SetFocusedInteractable(Interactable interactable)
@@ -270,9 +273,6 @@ public class PlayerController : MonoBehaviour
         {
           rb.AddExplosionForce(150, heldItemRoot.position, 2.0f, 0.25f, ForceMode.Impulse);
           AudioManager.Instance.PlaySound(sfxSlap);
-
-          GameObject slapFx = Instantiate(fxSlapPrefab);
-          slapFx.transform.position = heldItemRoot.position;
 
           PlayerController player = rb.GetComponent<PlayerController>();
           if (player != null)
