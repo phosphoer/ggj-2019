@@ -54,5 +54,5 @@ MonoBehaviour:
     type: 3}
   FxCorrect2Prefab: {fileID: 7350422944055182593, guid: 36eaa7a91b0bf1146a3c0735030fbe55,
     type: 3}
-  FxIncorrectPrefab: {fileID: 7350422944055182593, guid: 156150da2157a7441bc34b265ffec11d,
+  FxIncorrectPrefab: {fileID: 8430978311894308042, guid: 2bb896f5bbd6a234ea437916c517c921,
     type: 3}
