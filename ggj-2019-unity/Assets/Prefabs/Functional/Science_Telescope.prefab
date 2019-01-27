@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialInstance: {fileID: 2816853943498206312}
+  holdScaleFactor: 0.5
 --- !u!114 &5948674106031482829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 70bbc56fae996b2469692fbd9eab4708, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.27
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 70bbc56fae996b2469692fbd9eab4708, type: 3}
       propertyPath: m_LocalPosition.z
@@ -131,19 +132,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 70bbc56fae996b2469692fbd9eab4708, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 70bbc56fae996b2469692fbd9eab4708, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.20608978
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 70bbc56fae996b2469692fbd9eab4708, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 70bbc56fae996b2469692fbd9eab4708, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.97853315
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 70bbc56fae996b2469692fbd9eab4708, type: 3}
       propertyPath: m_RootOrder
@@ -155,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 70bbc56fae996b2469692fbd9eab4708, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -23.787
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 70bbc56fae996b2469692fbd9eab4708, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
