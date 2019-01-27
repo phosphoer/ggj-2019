@@ -65,11 +65,12 @@ Material:
     - _GlossMapScale: 0.45
     - _Glossiness: 0.7
     - _GlossyReflections: 1
+    - _LightingScale: 0.1
     - _Metallic: 0.77
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ReplacementThreshold: 1.5
+    - _ReplacementThreshold: 1
     - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
