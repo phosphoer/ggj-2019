@@ -138,6 +138,12 @@ ModelImporter:
     100264: SpineManip1
     100266: SpineManip2
     100268: SpineManip3
+    100270: pCylinder7
+    100272: polySurface1
+    100274: pSphere2
+    100276: pSphere3
+    100278: transform1
+    100280: transform2
     400000: _ROOT
     400002: //RootNode
     400004: Body
@@ -273,6 +279,12 @@ ModelImporter:
     400264: SpineManip1
     400266: SpineManip2
     400268: SpineManip3
+    400270: pCylinder7
+    400272: polySurface1
+    400274: pSphere2
+    400276: pSphere3
+    400278: transform1
+    400280: transform2
     2100000: lambert1
     2300000: collar
     2300002: dimms
@@ -286,6 +298,8 @@ ModelImporter:
     4300010: Shoe_L
     7400000: HitCycle
     7400002: Take 001
+    7400004: Recoil
+    7400006: Walk
     9500000: //RootNode
     13700000: Body
     13700002: Shoe_L
@@ -360,6 +374,62 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Recoil
+      takeName: Take 001
+      firstFrame: 37
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 73
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
