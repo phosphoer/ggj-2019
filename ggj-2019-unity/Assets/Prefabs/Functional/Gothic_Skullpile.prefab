@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6111162598939820213}
   - component: {fileID: 1591938860912060382}
   - component: {fileID: 469179201456273743}
-  - component: {fileID: 207983585}
   - component: {fileID: 224260136848384194}
+  - component: {fileID: 3158780602162152540}
   m_Layer: 0
   m_Name: Gothic_Skullpile
   m_TagString: Untagged
@@ -63,20 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f4e8398dd614de59355b90680077fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightVisual: {fileID: 0}
---- !u!65 &207983585
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6111162598939820214}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1529639, y: 1.3240952, z: 1.2641674}
-  m_Center: {x: -0.027613282, y: 0.65952134, z: -0.040833056}
+  materialInstance: {fileID: 3158780602162152540}
 --- !u!114 &224260136848384194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,7 +78,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   style: {fileID: 11400000, guid: 1211bf6ba6f434e4291503f3bbe0fe7f, type: 2}
   color: {fileID: 11400000, guid: 7fcf55de29b064890a04a02a007bcda4, type: 2}
+  materialInstance: {fileID: 3158780602162152540}
+--- !u!114 &3158780602162152540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111162598939820214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9b074fc264340a18714a5f706ed428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   renderer: {fileID: 7025405002023467614}
+--- !u!65 &866236079527351924
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7025405002025722888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.48509502, y: 2.4129944, z: 0.5439955}
+  m_Center: {x: -0.011520206, y: 0.9824998, z: -0.006634859}
 --- !u!1001 &7025405002025755328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,6 +190,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 78af055d4b265463ab7fd64b3d81f6d9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ffb7d5e6220ca4f9ac337b47efb129, type: 3}
+--- !u!1 &7025405002025722888 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100040, guid: a8ffb7d5e6220ca4f9ac337b47efb129,
+    type: 3}
+  m_PrefabInstance: {fileID: 7025405002025755328}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7025405002025367656 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400040, guid: a8ffb7d5e6220ca4f9ac337b47efb129,
