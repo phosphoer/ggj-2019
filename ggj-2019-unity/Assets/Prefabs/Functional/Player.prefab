@@ -80,7 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headTransform: {fileID: 7917163425031703254}
   heldItemRoot: {fileID: 1926249169248484019}
-  playerCamera: {fileID: 7917163424585427838}
+  playerCameraWorld: {fileID: 7917163424585427838}
+  playerCameraViewport: {fileID: 4302285424021175139}
   animator: {fileID: 1926249169239184517}
   moveSpeed: 6
   lookSensitivity: 200
@@ -228,6 +229,12 @@ Transform:
 --- !u!20 &7917163424585427838 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7521141062708193717, guid: 9a94a5f25d0ab4034bab2a2dbb08ed98,
+    type: 3}
+  m_PrefabInstance: {fileID: 414084611701883595}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &4302285424021175139 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4470902414444935592, guid: 9a94a5f25d0ab4034bab2a2dbb08ed98,
     type: 3}
   m_PrefabInstance: {fileID: 414084611701883595}
   m_PrefabAsset: {fileID: 0}

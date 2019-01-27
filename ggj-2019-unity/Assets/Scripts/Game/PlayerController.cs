@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     set { playerInput = value; }
   }
 
-  public Camera Camera => playerCamera;
+  public Camera WorldCamera => playerCameraWorld;
+  public Camera ViewportCamera => playerCameraViewport;
+  public bool ControlsEnabled { get; set; }
 
   [SerializeField]
   private Transform headTransform = null;
@@ -19,7 +21,10 @@ public class PlayerController : MonoBehaviour
   private Transform heldItemRoot = null;
 
   [SerializeField]
-  private Camera playerCamera = null;
+  private Camera playerCameraWorld = null;
+
+  [SerializeField]
+  private Camera playerCameraViewport = null;
 
   [SerializeField]
   private Animator animator = null;
@@ -58,8 +63,10 @@ public class PlayerController : MonoBehaviour
       return;
     }
 
-    Cursor.visible = false;
-    Cursor.lockState = CursorLockMode.Locked;
+    if (!ControlsEnabled)
+    {
+      return;
+    }
 
     // Gather input state
     float walkAxis = playerInput.GetAxis(InputConsts.Action.Walk);
