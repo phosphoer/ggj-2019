@@ -138,6 +138,12 @@ ModelImporter:
     100264: SpineManip1
     100266: SpineManip2
     100268: SpineManip3
+    100270: pCylinder7
+    100272: polySurface1
+    100274: pSphere2
+    100276: pSphere3
+    100278: transform1
+    100280: transform2
     400000: _ROOT
     400002: //RootNode
     400004: Body
@@ -273,6 +279,12 @@ ModelImporter:
     400264: SpineManip1
     400266: SpineManip2
     400268: SpineManip3
+    400270: pCylinder7
+    400272: polySurface1
+    400274: pSphere2
+    400276: pSphere3
+    400278: transform1
+    400280: transform2
     2100000: lambert1
     2300000: collar
     2300002: dimms
