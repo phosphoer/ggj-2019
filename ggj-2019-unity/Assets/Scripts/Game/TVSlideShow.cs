@@ -26,6 +26,9 @@ public class TVSlideShow : MonoBehaviour
   [SerializeField]
   private TMP_Text scoreText = null;
 
+  [SerializeField]
+  private GameObject styleSlide = null;
+
   private void Awake()
   {
     foreach (Transform slideShowItem in slideShowIntro)
@@ -90,6 +93,11 @@ public class TVSlideShow : MonoBehaviour
       }
 
       slideShowItem.gameObject.SetActive(false);
+    }
+
+    if (slidesRoot == slideShowIntro)
+    {
+      styleSlide.SetActive(true);
     }
   }
 }

@@ -1588,6 +1588,7 @@ MonoBehaviour:
   color1NameText: {fileID: 3879415527403689483}
   color2NameText: {fileID: 7960594964337187782}
   scoreText: {fileID: 3744851311495468881}
+  styleSlide: {fileID: 3988798724675822368}
 --- !u!1 &5250477656834940550
 GameObject:
   m_ObjectHideFlags: 0

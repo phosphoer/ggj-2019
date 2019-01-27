@@ -86,7 +86,7 @@ MonoBehaviour:
   moveSpeed: 6
   lookSensitivity: 200
   maxLookAngle: 60
-  interactRange: 2
+  interactRange: 2.5
   interactMask:
     serializedVersion: 2
     m_Bits: 4294967291
