@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7281802888644336328}
   - component: {fileID: 8004974127322855426}
   m_Layer: 0
-  m_Name: HeartFX
+  m_Name: HeartsFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,8 +284,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.25
-      minScalar: 0.75
+      scalar: 0.75
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -974,9 +974,9 @@ ParticleSystem:
       time: 0
       countCurve:
         serializedVersion: 2
-        minMaxState: 0
-        scalar: 1
-        minScalar: 30
+        minMaxState: 3
+        scalar: 8
+        minScalar: 5
         maxCurve:
           serializedVersion: 2
           m_Curve:
@@ -1041,14 +1041,14 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 33.219044
-          outSlope: 33.219044
+          inSlope: 9.083334
+          outSlope: 9.083334
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
-          outWeight: 0.078947365
+          outWeight: 0.14035086
         - serializedVersion: 3
-          time: 0.08715597
+          time: 0.13073395
           value: 1
           inSlope: 0
           outSlope: 0
@@ -1563,8 +1563,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0
-      minScalar: 0
+      scalar: -0.5
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1616,8 +1616,8 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0
-      minScalar: 0
+      scalar: -0.5
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2648,7 +2648,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2754,7 +2754,7 @@ ParticleSystem:
     strengthZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2

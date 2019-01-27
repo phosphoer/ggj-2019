@@ -34,10 +34,16 @@ public class DecorEvaluator : MonoBehaviour
         if (score > 0)
         {
           AudioManager.Instance.PlaySound(decorEvaluator.decorList.CorrectSound);
+          GameObject fxPrefab = score == 1 ? decorEvaluator.decorList.FxCorrect1Prefab : decorEvaluator.decorList.FxCorrect2Prefab;
+          GameObject fx = Instantiate(fxPrefab, decorItem.transform.position, Quaternion.identity);
+          fx.transform.forward = Vector3.up;
         }
         else
         {
+          GameObject fxPrefab = decorEvaluator.decorList.FxIncorrectPrefab;
+          GameObject fx = Instantiate(fxPrefab, decorItem.transform.position, Quaternion.identity);
           AudioManager.Instance.PlaySound(decorEvaluator.decorList.IncorrectSound);
+          fx.transform.forward = Vector3.up;
         }
       }
     }

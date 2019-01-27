@@ -49,6 +49,9 @@ public class PlayerController : MonoBehaviour
   private AnimationCurve slapHeadRollAnim = null;
 
   [SerializeField]
+  private GameObject fxSlapPrefab = null;
+
+  [SerializeField]
   private SoundBank sfxSlap = null;
 
   [SerializeField]
@@ -205,6 +208,9 @@ public class PlayerController : MonoBehaviour
     animator.SetTrigger("Recoil");
     DropHeldItem();
     StartCoroutine(GotSlappedAnim());
+
+    GameObject slapFx = Instantiate(fxSlapPrefab);
+    slapFx.transform.position = headTransform.position;
   }
 
   private void SetFocusedInteractable(Interactable interactable)

@@ -50,3 +50,9 @@ MonoBehaviour:
   - {fileID: 224260136848384194, guid: da09e673efd9db14cad7236002db7784, type: 3}
   CorrectSound: {fileID: 11400000, guid: eb66accdf1f4f47a0b6ec5d14945f31f, type: 2}
   IncorrectSound: {fileID: 11400000, guid: 3d2247f47f05142e3970693da3372cfe, type: 2}
+  FxCorrect1Prefab: {fileID: 7350422944055182593, guid: 156150da2157a7441bc34b265ffec11d,
+    type: 3}
+  FxCorrect2Prefab: {fileID: 7350422944055182593, guid: 36eaa7a91b0bf1146a3c0735030fbe55,
+    type: 3}
+  FxIncorrectPrefab: {fileID: 7350422944055182593, guid: 156150da2157a7441bc34b265ffec11d,
+    type: 3}

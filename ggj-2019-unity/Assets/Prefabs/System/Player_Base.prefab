@@ -114,6 +114,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  fxSlapPrefab: {fileID: 7405427055757317144, guid: b044797fa220948428a609b7b7712ef1,
+    type: 3}
   sfxSlap: {fileID: 11400000, guid: 8f1a909a706ed4288b59e3ffa27a6331, type: 2}
   sfxInteract: {fileID: 11400000, guid: 18c4d97db7da346fabd9096ac8e182e0, type: 2}
 --- !u!54 &6908867774296968237
