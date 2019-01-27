@@ -1,13 +1,33 @@
 fileFormatVersion: 2
-guid: f09f16f0897b67d4689c67d3198e0495
+guid: 2016ff864158a8548b87092e5ddd9e1c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: scaff
+    100000: backing
+    100002: curve1
+    100004: //RootNode
+    100006: pPlane4
+    100008: text
+    400000: backing
+    400002: curve1
+    400004: //RootNode
+    400006: pPlane4
+    400008: text
+    2300000: backing
+    2300002: curve1
+    2300004: pPlane4
+    2300006: text
+    2300008: //RootNode
+    3300000: backing
+    3300002: curve1
+    3300004: pPlane4
+    3300006: text
+    3300008: //RootNode
+    4300000: curve1
+    4300002: pPlane4
+    4300004: text
+    4300006: backing
+    4300008: hit2
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -39,7 +59,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
