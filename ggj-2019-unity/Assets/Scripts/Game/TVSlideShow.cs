@@ -28,7 +28,17 @@ public class TVSlideShow : MonoBehaviour
     foreach (Transform slideShowItem in slideShowRoot)
     {
       slideShowItem.gameObject.SetActive(true);
-      yield return new WaitForSeconds(slideTiming);
+
+      for (float timer = 0; timer < slideTiming; timer += Time.deltaTime)
+      {
+        if (PlayerManager.Instance.IsAnyPlayerPressingButton())
+        {
+          timer = slideTiming;
+        }
+
+        yield return null;
+      }
+
       slideShowItem.gameObject.SetActive(false);
     }
   }

@@ -5,6 +5,7 @@ Shader "Custom/Opaque"
     _Color ("Color", Color) = (1,1,1,1)
     _MainTex ("Texture", 2D) = "white" {}
     _FogScale ("Fog Scale", float) = 1
+    _LightingScale ("Lighting Scale", float) = 0.1
 
     [Enum(Off,0,On,1)] 
     _ZWrite ("ZWrite", Float) = 1
@@ -42,21 +43,22 @@ Shader "Custom/Opaque"
       struct v2f
       {
         float4 pos : SV_POSITION;
-        float3 normal : NORMAL;
+        float3 worldNormal : NORMAL;
         fixed4 color : COLOR;
         float2 uv : TEXCOORD0;
         UNITY_FOG_COORDS(1)
       };
 
       sampler2D _MainTex;
-      float4 _Color;
-      float _FogScale;
+      fixed4 _Color;
+      fixed _FogScale;
+      fixed _LightingScale;
 
       v2f vert (appdata v)
       {
         v2f o;
         o.pos = UnityObjectToClipPos(v.vertex);
-        o.normal = UnityObjectToWorldNormal(v.normal);
+        o.worldNormal = UnityObjectToWorldNormal(v.normal);
         o.uv = v.uv;
         o.color = v.color;
 
@@ -68,7 +70,12 @@ Shader "Custom/Opaque"
       fixed4 frag (v2f i) : SV_Target
       {
         fixed4 color = _Color * tex2D(_MainTex, i.uv) * i.color;
-        fixed4 fogColor = _Color * tex2D(_MainTex, i.uv) * i.color;
+        
+        float lightDot = max(dot(normalize(i.worldNormal), float3(1, 1, 1)), 0);
+        lightDot = saturate(ceil(lightDot - 0.9)) * _LightingScale;
+        color += lightDot;
+
+        fixed4 fogColor = color;
         UNITY_APPLY_FOG(i.fogCoord, fogColor);
         return lerp(color, fogColor, _FogScale); 
       }

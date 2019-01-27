@@ -9,6 +9,7 @@ Shader "Custom/OpaqueColorReplace"
     _ReplaceWithColor ("Replace With Color", Color) = (1, 1, 1, 1)
     _ReplacementThreshold ("Replacement Threshold", float) = 0.1
     _HighlightColor ("Highlight Color", Color) = (0, 0, 0, 0)
+    _LightingScale ("Lighting Scale", float) = 0.1
 
     [Enum(Off,0,On,1)] 
     _ZWrite ("ZWrite", Float) = 1
@@ -60,6 +61,7 @@ Shader "Custom/OpaqueColorReplace"
       fixed4 _ReplaceWithColor;
       fixed4 _HighlightColor;
       fixed _ReplacementThreshold;
+      fixed _LightingScale;
       fixed _FogScale;
 
       v2f vert (appdata v)
@@ -85,6 +87,10 @@ Shader "Custom/OpaqueColorReplace"
         fixed4 color = texColorReplaced * _Color * i.color;
         color.a = 1;
         color.rgb += _HighlightColor.rgb;
+
+        float lightDot = max(dot(normalize(i.worldNormal), float3(1, 1, 1)), 0);
+        lightDot = saturate(ceil(lightDot - 0.9)) * _LightingScale;
+        color += lightDot;
 
         fixed4 fogColor = color;
         UNITY_APPLY_FOG(i.fogCoord, fogColor);
