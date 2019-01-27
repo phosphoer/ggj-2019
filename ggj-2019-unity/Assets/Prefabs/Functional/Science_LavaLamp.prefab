@@ -4944,7 +4944,7 @@ GameObject:
   - component: {fileID: 5651064329314143544}
   - component: {fileID: 1370412755}
   m_Layer: 0
-  m_Name: LavaLamp
+  m_Name: Science_LavaLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4996,7 +4996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f4e8398dd614de59355b90680077fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialInstance: {fileID: 0}
+  materialInstance: {fileID: 5651064329314143544}
 --- !u!114 &5003779748981406297
 MonoBehaviour:
   m_ObjectHideFlags: 0
