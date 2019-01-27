@@ -17,12 +17,28 @@ public class DecorEvaluator : MonoBehaviour
 
   private int evaluateIndex;
   private int runningScore;
+  private Bounds bounds;
 
   private static List<DecorEvaluator> instances = new List<DecorEvaluator>();
+
+  public static void EvaluateDroppedItem(DecorItem decorItem)
+  {
+    foreach (DecorEvaluator decorEvaluator in Instances)
+    {
+      if (decorEvaluator.ContainsItem(decorItem))
+      {
+        int score = decorEvaluator.CalculateItemScore(decorItem);
+
+      }
+    }
+  }
 
   private void Awake()
   {
     instances.Add(this);
+
+    bounds = new Bounds(boundsCornerA.position, Vector3.zero);
+    bounds.Encapsulate(boundsCornerB.position);
   }
 
   private void OnDestroy()
@@ -34,13 +50,11 @@ public class DecorEvaluator : MonoBehaviour
   {
     if (evaluateIndex < DecorItem.Instances.Count)
     {
-      Bounds bounds = new Bounds(boundsCornerA.position, Vector3.zero);
-      bounds.Encapsulate(boundsCornerB.position);
-
       DecorItem decorItem = DecorItem.Instances[evaluateIndex];
-      if (bounds.Contains(decorItem.transform.position))
+      if (ContainsItem(decorItem))
       {
-        runningScore += CalculateItemScore(decorItem);
+        int itemScore = CalculateItemScore(decorItem);
+        runningScore += itemScore;
       }
     }
 
@@ -65,11 +79,13 @@ public class DecorEvaluator : MonoBehaviour
     }
   }
 
+  public bool ContainsItem(DecorItem decorItem)
+  {
+    return bounds.Contains(decorItem.transform.position);
+  }
+
   public int CalculateTotalScore()
   {
-    Bounds bounds = new Bounds(boundsCornerA.position, Vector3.zero);
-    bounds.Encapsulate(boundsCornerB.position);
-
     int totalScore = 0;
     foreach (DecorItem decorItem in DecorItem.Instances)
     {
@@ -82,7 +98,7 @@ public class DecorEvaluator : MonoBehaviour
     return totalScore;
   }
 
-  private int CalculateItemScore(DecorItem decorItem)
+  public int CalculateItemScore(DecorItem decorItem)
   {
     bool hasStyle = decorItem.Style == DesiredStyle;
     bool hasColor = DesiredColors.Contains(decorItem.Color);

@@ -182,6 +182,12 @@ public class PlayerController : MonoBehaviour
   {
     if (heldItem != null)
     {
+      DecorItem decorItem = heldItem.GetComponent<DecorItem>();
+      if (decorItem != null)
+      {
+        DecorEvaluator.EvaluateDroppedItem(decorItem);
+      }
+
       heldItem.transform.SetParent(heldItemOriginalParent, worldPositionStays: true);
       heldItem.EnablePhysics();
       heldItem = null;

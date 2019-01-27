@@ -3,6 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class InteractablePickUp : Interactable
 {
+  [SerializeField]
+  private float holdScaleFactor = 0.5f;
+
   private new Rigidbody rigidbody;
   private Vector3 startScale;
 
@@ -21,7 +24,7 @@ public class InteractablePickUp : Interactable
   {
     IsInteractable = false;
     rigidbody.isKinematic = true;
-    transform.localScale *= 0.5f;
+    transform.localScale *= holdScaleFactor;
     GetComponentInChildren<Collider>().enabled = false;
   }
 
