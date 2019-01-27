@@ -5,4 +5,5 @@ public class DecorList : ScriptableObject
 {
   public DecorStyle[] DecorStyles;
   public DecorColor[] DecorColors;
+  public DecorItem[] DecorItems;
 }

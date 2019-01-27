@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc55168f964414aa8b19036135cd672a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: {fileID: 11400000, guid: e3f0894ed94a1674b93cad31d8980edf, type: 2}
+  style: {fileID: 11400000, guid: 1211bf6ba6f434e4291503f3bbe0fe7f, type: 2}
   color: {fileID: 11400000, guid: 7fcf55de29b064890a04a02a007bcda4, type: 2}
   materialInstance: {fileID: 5118162267090410958}
 --- !u!114 &5118162267090410958
@@ -113,6 +113,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6111162598939820213}
     m_Modifications:
+    - target: {fileID: 2300002, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 78af055d4b265463ab7fd64b3d81f6d9, type: 2}
     - target: {fileID: 100000, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_Name
       value: Candelabra
@@ -161,10 +165,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2300002, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 78af055d4b265463ab7fd64b3d81f6d9, type: 2}
     - target: {fileID: 2300004, guid: a6110ef0f54494364b68e684a5f71891, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

@@ -30,9 +30,58 @@ public class DecorManager : MonoBehaviour
       DecorEvaluator anotherRoom = DecorEvaluator.Instances[anotherRoomIndex];
       thisRoom.DesiredColors.Add(anotherRoom.DesiredColors[0]);
     }
+
+    // Spawn decor items in each room 
+    foreach (DecorEvaluator decorEvaluator in DecorEvaluator.Instances)
+    {
+      List<DecorItem> possibleItems = GetDifferentStyleItemsForRoom(decorEvaluator);
+      List<DecorColor> possibleColors = GetDifferentColorsForRoom(decorEvaluator);
+      DecorItemSpawner[] spawners = decorEvaluator.GetComponentsInChildren<DecorItemSpawner>();
+      foreach (DecorItemSpawner spawner in spawners)
+      {
+        if (possibleItems.Count == 0)
+        {
+          possibleItems = GetDifferentStyleItemsForRoom(decorEvaluator);
+        }
+
+        DecorItem itemPrefab = possibleItems[Random.Range(0, possibleItems.Count)];
+        DecorColor itemColor = possibleColors[Random.Range(0, possibleColors.Count)];
+        possibleItems.Remove(itemPrefab);
+        spawner.SpawnDecorItem(itemPrefab, itemColor);
+      }
+    }
   }
 
-  public DecorStyle GetStyleFromPool()
+  private List<DecorItem> GetDifferentStyleItemsForRoom(DecorEvaluator decorEvaluator)
+  {
+    List<DecorItem> decorItems = new List<DecorItem>(decorList.DecorItems);
+    for (int i = decorItems.Count - 1; i >= 0; --i)
+    {
+      DecorItem decorItem = decorItems[i];
+      if (decorItem.Style == decorEvaluator.DesiredStyle)
+      {
+        decorItems.RemoveAt(i);
+      }
+    }
+
+    return decorItems;
+  }
+
+  private List<DecorColor> GetDifferentColorsForRoom(DecorEvaluator decorEvaluator)
+  {
+    List<DecorColor> possibleColors = new List<DecorColor>(decorList.DecorColors);
+    foreach (DecorColor decorColor in decorList.DecorColors)
+    {
+      if (decorEvaluator.DesiredColors.Contains(decorColor))
+      {
+        possibleColors.Remove(decorColor);
+      }
+    }
+
+    return possibleColors;
+  }
+
+  private DecorStyle GetStyleFromPool()
   {
     int index = Random.Range(0, availableStyles.Count);
     DecorStyle chosenStyle = availableStyles[index];
@@ -40,7 +89,7 @@ public class DecorManager : MonoBehaviour
     return chosenStyle;
   }
 
-  public DecorColor GetColorFromPool()
+  private DecorColor GetColorFromPool()
   {
     int index = Random.Range(0, availableColors.Count);
     DecorColor chosenColor = availableColors[index];
