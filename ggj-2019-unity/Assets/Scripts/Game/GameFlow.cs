@@ -88,7 +88,7 @@ public class GameFlow : MonoBehaviour
     Coroutine waitRoutine = null;
     foreach (TVSlideShow slideShow in slideShows)
     {
-      waitRoutine = slideShow.StartSlideShow();
+      waitRoutine = slideShow.StartIntroSlides();
     }
 
     yield return waitRoutine;
@@ -133,11 +133,18 @@ public class GameFlow : MonoBehaviour
     foreach (PlayerController player in PlayerManager.Instance.JoinedPlayers)
     {
       player.ControlsEnabled = false;
+      player.ResetToStartPosition();
     }
 
-    // Tally up scores 
+    // Show outro 
+    TVSlideShow[] slideShows = FindObjectsOfType<TVSlideShow>();
+    Coroutine waitRoutine = null;
+    foreach (TVSlideShow slideShow in slideShows)
+    {
+      waitRoutine = slideShow.StartOutroSlides();
+    }
 
-    yield return null;
+    yield return waitRoutine;
   }
 
   private IEnumerator EndState()

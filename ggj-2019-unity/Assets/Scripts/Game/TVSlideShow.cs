@@ -1,31 +1,81 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class TVSlideShow : MonoBehaviour
 {
   [SerializeField]
-  private Transform slideShowRoot = null;
+  private Transform slideShowIntro = null;
+
+  [SerializeField]
+  private Transform slideShowOutro = null;
 
   [SerializeField]
   private float slideTiming = 3.0f;
 
+  [SerializeField]
+  private TMP_Text styleNameText = null;
+
+  [SerializeField]
+  private TMP_Text color1NameText = null;
+
+  [SerializeField]
+  private TMP_Text color2NameText = null;
+
+  [SerializeField]
+  private TMP_Text scoreText = null;
+
   private void Awake()
   {
-    foreach (Transform slideShowItem in slideShowRoot)
+    foreach (Transform slideShowItem in slideShowIntro)
+    {
+      slideShowItem.gameObject.SetActive(false);
+    }
+
+    foreach (Transform slideShowItem in slideShowOutro)
     {
       slideShowItem.gameObject.SetActive(false);
     }
   }
 
-  public Coroutine StartSlideShow()
+  public Coroutine StartIntroSlides()
   {
-    return StartCoroutine(SlideShowRoutine());
+    DecorEvaluator parentRoom = GetComponentInParent<DecorEvaluator>();
+    if (parentRoom != null)
+    {
+      styleNameText.text = parentRoom.DesiredStyle.Name;
+      color1NameText.text = parentRoom.DesiredColors[0].Name;
+      color2NameText.text = parentRoom.DesiredColors[1].Name;
+      color1NameText.color = parentRoom.DesiredColors[0].Color;
+      color2NameText.color = parentRoom.DesiredColors[1].Color;
+    }
+    else
+    {
+      Debug.LogError("TV was not under a decor evaluator", this);
+    }
+
+    return StartCoroutine(SlideShowRoutine(slideShowIntro));
   }
 
-  private IEnumerator SlideShowRoutine()
+  public Coroutine StartOutroSlides()
   {
-    foreach (Transform slideShowItem in slideShowRoot)
+    DecorEvaluator parentRoom = GetComponentInParent<DecorEvaluator>();
+    if (parentRoom != null)
+    {
+      scoreText.text = parentRoom.CalculateTotalScore().ToString();
+    }
+    else
+    {
+      Debug.LogError("TV was not under a decor evaluator", this);
+    }
+
+    return StartCoroutine(SlideShowRoutine(slideShowOutro));
+  }
+
+  private IEnumerator SlideShowRoutine(Transform slidesRoot)
+  {
+    foreach (Transform slideShowItem in slidesRoot)
     {
       slideShowItem.gameObject.SetActive(true);
 

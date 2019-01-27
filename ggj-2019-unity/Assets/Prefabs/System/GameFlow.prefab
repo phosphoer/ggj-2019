@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce3192a5cce445e28cc1dd7e07493f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 60
+  roundTime: 30
   warnAtTimeLeft: 15
   waitingForPlayersPrompt: {fileID: 8533741684506356945}
   startGamePrompt: {fileID: 332428583313345528}
