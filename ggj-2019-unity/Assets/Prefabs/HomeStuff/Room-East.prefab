@@ -1649,6 +1649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boundsCornerA: {fileID: 1319011525078847962}
   boundsCornerB: {fileID: 2154532060965526361}
+  decorList: {fileID: 11400000, guid: 0b9840285432f4d0ca67fe9620f7d2e6, type: 2}
 --- !u!1 &5627079412272725523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,6 +2789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029215680539379319, guid: 7841159c855bb0d44bcc9f1f89548d64,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7841159c855bb0d44bcc9f1f89548d64, type: 3}

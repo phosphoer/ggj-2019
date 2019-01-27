@@ -6,4 +6,6 @@ public class DecorList : ScriptableObject
   public DecorStyle[] DecorStyles;
   public DecorColor[] DecorColors;
   public DecorItem[] DecorItems;
+  public SoundBank CorrectSound;
+  public SoundBank IncorrectSound;
 }

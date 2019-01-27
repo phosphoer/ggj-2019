@@ -48,3 +48,5 @@ MonoBehaviour:
   - {fileID: 1951957979370394794, guid: ae0584af2682bab48b06599ed916abbe, type: 3}
   - {fileID: 1033677516744895385, guid: 74a124d30f903bb46a38645331012f16, type: 3}
   - {fileID: 224260136848384194, guid: da09e673efd9db14cad7236002db7784, type: 3}
+  CorrectSound: {fileID: 11400000, guid: eb66accdf1f4f47a0b6ec5d14945f31f, type: 2}
+  IncorrectSound: {fileID: 11400000, guid: 3d2247f47f05142e3970693da3372cfe, type: 2}

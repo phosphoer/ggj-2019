@@ -48,6 +48,12 @@ public class PlayerController : MonoBehaviour
   [SerializeField]
   private AnimationCurve slapHeadRollAnim = null;
 
+  [SerializeField]
+  private SoundBank sfxSlap = null;
+
+  [SerializeField]
+  private SoundBank sfxInteract = null;
+
   private Rewired.Player playerInput;
   private new Rigidbody rigidbody;
   private Interactable focusedItem;
@@ -175,6 +181,8 @@ public class PlayerController : MonoBehaviour
       heldItem.transform.SetParent(heldItemRoot, worldPositionStays: true);
       heldItem.transform.localPosition = Vector3.zero;
       heldItem.DisablePhysics();
+
+      AudioManager.Instance.PlaySound(sfxInteract);
     }
   }
 
@@ -191,6 +199,8 @@ public class PlayerController : MonoBehaviour
       heldItem.transform.SetParent(heldItemOriginalParent, worldPositionStays: true);
       heldItem.EnablePhysics();
       heldItem = null;
+
+      AudioManager.Instance.PlaySound(sfxInteract);
     }
   }
 
@@ -256,6 +266,7 @@ public class PlayerController : MonoBehaviour
         if (rb != null && rb != rigidbody)
         {
           rb.AddExplosionForce(150, heldItemRoot.position, 2.0f, 0.25f, ForceMode.Impulse);
+          AudioManager.Instance.PlaySound(sfxSlap);
 
           PlayerController player = rb.GetComponent<PlayerController>();
           if (player != null)

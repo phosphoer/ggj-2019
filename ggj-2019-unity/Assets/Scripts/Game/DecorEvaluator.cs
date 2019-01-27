@@ -15,6 +15,9 @@ public class DecorEvaluator : MonoBehaviour
   [SerializeField]
   private Transform boundsCornerB = null;
 
+  [SerializeField]
+  private DecorList decorList = null;
+
   private int evaluateIndex;
   private int runningScore;
   private Bounds bounds;
@@ -28,7 +31,14 @@ public class DecorEvaluator : MonoBehaviour
       if (decorEvaluator.ContainsItem(decorItem))
       {
         int score = decorEvaluator.CalculateItemScore(decorItem);
-
+        if (score > 0)
+        {
+          AudioManager.Instance.PlaySound(decorEvaluator.decorList.CorrectSound);
+        }
+        else
+        {
+          AudioManager.Instance.PlaySound(decorEvaluator.decorList.IncorrectSound);
+        }
       }
     }
   }
