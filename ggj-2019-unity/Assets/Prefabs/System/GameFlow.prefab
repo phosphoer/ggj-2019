@@ -567,6 +567,11 @@ MonoBehaviour:
   roundTimerRoot: {fileID: 633878863958329649}
   roundTimer1PlayerRoot: {fileID: 5044743494426170212}
   roundTimeText: {fileID: 2121102469903844579}
+  musicGame: {fileID: 11400000, guid: 3d7f10a9156804219a8ebccb5d725301, type: 2}
+  musicWaitForPlayers: {fileID: 11400000, guid: 1d54c146ef82746cba211d8752a17b63,
+    type: 2}
+  musicIntro: {fileID: 11400000, guid: 2478801117de34791ab4bb54406db23d, type: 2}
+  playerJoinSound: {fileID: 11400000, guid: eb66accdf1f4f47a0b6ec5d14945f31f, type: 2}
 --- !u!1 &8533741684506356945
 GameObject:
   m_ObjectHideFlags: 0

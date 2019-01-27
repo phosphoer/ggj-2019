@@ -26,6 +26,18 @@ public class GameFlow : MonoBehaviour
   [SerializeField]
   private Text roundTimeText = null;
 
+  [SerializeField]
+  private SoundBank musicGame = null;
+
+  [SerializeField]
+  private SoundBank musicWaitForPlayers = null;
+
+  [SerializeField]
+  private SoundBank musicIntro = null;
+
+  [SerializeField]
+  private SoundBank playerJoinSound = null;
+
   private int lastRoundedTime;
 
   private void Awake()
@@ -47,6 +59,8 @@ public class GameFlow : MonoBehaviour
   {
     Cursor.visible = false;
     Cursor.lockState = CursorLockMode.Locked;
+
+    AudioManager.Instance.FadeInSound(gameObject, musicWaitForPlayers, 2.0f);
 
     // Wait for a minimum number of players to join
     waitingForPlayersPrompt.SetActive(true);
@@ -78,11 +92,15 @@ public class GameFlow : MonoBehaviour
     PlayerManager.Instance.IsJoiningEnabled = false;
     PlayerManager.PlayerJoined -= OnPlayerJoined;
 
+    AudioManager.Instance.FadeOutSound(gameObject, musicWaitForPlayers, 2.0f);
+
     yield return null;
   }
 
   private IEnumerator IntroState()
   {
+    AudioManager.Instance.FadeInSound(gameObject, musicIntro, 2.0f);
+
     // Start TV intros and wait for them to complete
     TVSlideShow[] slideShows = FindObjectsOfType<TVSlideShow>();
     Coroutine waitRoutine = null;
@@ -92,10 +110,14 @@ public class GameFlow : MonoBehaviour
     }
 
     yield return waitRoutine;
+
+    AudioManager.Instance.FadeOutSound(gameObject, musicIntro, 2.0f);
   }
 
   private IEnumerator GameState()
   {
+    AudioManager.Instance.FadeInSound(gameObject, musicGame, 2.0f);
+
     // Enable everyone's controls
     foreach (PlayerController player in PlayerManager.Instance.JoinedPlayers)
     {
@@ -136,6 +158,9 @@ public class GameFlow : MonoBehaviour
       player.ResetToStartPosition();
     }
 
+    AudioManager.Instance.FadeOutSound(gameObject, musicGame, 2.0f);
+    AudioManager.Instance.FadeInSound(gameObject, musicIntro, 2.0f);
+
     // Show outro 
     TVSlideShow[] slideShows = FindObjectsOfType<TVSlideShow>();
     Coroutine waitRoutine = null;
@@ -159,6 +184,7 @@ public class GameFlow : MonoBehaviour
 
   private void OnPlayerJoined(PlayerController player)
   {
+    AudioManager.Instance.PlaySound(playerJoinSound);
     player.ControlsEnabled = false;
   }
 }
