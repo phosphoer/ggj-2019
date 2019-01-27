@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 
 public class TVSlideShow : MonoBehaviour
 {
+  public static IReadOnlyList<TVSlideShow> Instances => instances;
+
   [SerializeField]
   private Transform slideShowIntro = null;
 
@@ -29,8 +32,12 @@ public class TVSlideShow : MonoBehaviour
   [SerializeField]
   private GameObject styleSlide = null;
 
+  private static List<TVSlideShow> instances = new List<TVSlideShow>();
+
   private void Awake()
   {
+    instances.Add(this);
+
     foreach (Transform slideShowItem in slideShowIntro)
     {
       slideShowItem.gameObject.SetActive(false);
@@ -40,10 +47,14 @@ public class TVSlideShow : MonoBehaviour
     {
       slideShowItem.gameObject.SetActive(false);
     }
+
+    gameObject.SetActive(false);
   }
 
   public Coroutine StartIntroSlides()
   {
+    gameObject.SetActive(true);
+
     DecorEvaluator parentRoom = GetComponentInParent<DecorEvaluator>();
     if (parentRoom != null)
     {

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 public class WarningLight : MonoBehaviour
 {
-  public static IReadOnlyList<WarningLight> Instances { get; private set; }
-
   private static List<WarningLight> instances = new List<WarningLight>();
 
   public static void TurnOn()

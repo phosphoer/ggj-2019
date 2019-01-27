@@ -102,9 +102,8 @@ public class GameFlow : MonoBehaviour
     AudioManager.Instance.FadeInSound(gameObject, musicIntro, 2.0f);
 
     // Start TV intros and wait for them to complete
-    TVSlideShow[] slideShows = FindObjectsOfType<TVSlideShow>();
     Coroutine waitRoutine = null;
-    foreach (TVSlideShow slideShow in slideShows)
+    foreach (TVSlideShow slideShow in TVSlideShow.Instances)
     {
       waitRoutine = slideShow.StartIntroSlides();
     }
@@ -165,9 +164,8 @@ public class GameFlow : MonoBehaviour
     AudioManager.Instance.FadeInSound(gameObject, musicIntro, 2.0f);
 
     // Show outro 
-    TVSlideShow[] slideShows = FindObjectsOfType<TVSlideShow>();
     Coroutine waitRoutine = null;
-    foreach (TVSlideShow slideShow in slideShows)
+    foreach (TVSlideShow slideShow in TVSlideShow.Instances)
     {
       waitRoutine = slideShow.StartOutroSlides();
     }
