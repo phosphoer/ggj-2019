@@ -53,10 +53,12 @@ public class PlayerManager : MonoBehaviour
     player.PlayerInput = playerInput;
     player.gameObject.SetActive(true);
 
+    // If this was the keyboard player, remove any joystics they have have stolen
     Rewired.Controller controller = playerInput.controllers.GetLastActiveController();
-    if (controller.type == Rewired.ControllerType.Mouse && playerInput.controllers.joystickCount > 0)
+    if (controller.type == Rewired.ControllerType.Mouse || controller.type == Rewired.ControllerType.Keyboard)
     {
-      AssignJoystickToNextOpenPlayer(playerInput.controllers.Joysticks[0]);
+      if (playerInput.controllers.joystickCount > 0)
+        AssignJoystickToNextOpenPlayer(playerInput.controllers.Joysticks[0]);
     }
 
     // Set up the player viewport 
