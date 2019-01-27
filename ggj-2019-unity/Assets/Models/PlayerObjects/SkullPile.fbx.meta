@@ -1,0 +1,296 @@
+fileFormatVersion: 2
+guid: a8ffb7d5e6220ca4f9ac337b47efb129
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: pCylinder2
+    100002: pSphere3
+    100004: pSphere3 1
+    100006: pSphere3 2
+    100008: pSphere3 3
+    100010: pSphere3 4
+    100012: pSphere3 5
+    100014: pSphere3 6
+    100016: pSphere3 7
+    100018: pSphere3 8
+    100020: Skull
+    100022: Skull_LowPoly
+    100024: Skull_LowPoly1
+    100026: Skull_LowPoly2
+    100028: Skull_LowPoly4
+    100030: Skull_LowPoly5
+    100032: Skull_LowPoly6
+    100034: Skull_LowPoly7
+    100036: Skull_LowPoly8
+    100038: SkullBase
+    100040: //RootNode
+    100042: Spike1
+    100044: Spike2
+    100046: Spike3
+    100048: Spikes
+    100050: pSphere10
+    100052: pSphere11
+    100054: pSphere4
+    100056: pSphere5
+    100058: pSphere6
+    100060: pSphere7
+    100062: pSphere8
+    100064: pSphere9
+    100066: SkullEyes
+    100068: SkullPile
+    100070: transform10
+    100072: transform11
+    100074: transform12
+    100076: transform13
+    100078: transform14
+    100080: transform15
+    100082: transform16
+    100084: transform17
+    100086: transform18
+    100088: transform19
+    100090: transform20
+    100092: transform21
+    100094: transform22
+    100096: transform23
+    100098: transform24
+    100100: transform7
+    100102: transform8
+    100104: transform9
+    400000: pCylinder2
+    400002: pSphere3
+    400004: pSphere3 1
+    400006: pSphere3 2
+    400008: pSphere3 3
+    400010: pSphere3 4
+    400012: pSphere3 5
+    400014: pSphere3 6
+    400016: pSphere3 7
+    400018: pSphere3 8
+    400020: Skull
+    400022: Skull_LowPoly
+    400024: Skull_LowPoly1
+    400026: Skull_LowPoly2
+    400028: Skull_LowPoly4
+    400030: Skull_LowPoly5
+    400032: Skull_LowPoly6
+    400034: Skull_LowPoly7
+    400036: Skull_LowPoly8
+    400038: SkullBase
+    400040: //RootNode
+    400042: Spike1
+    400044: Spike2
+    400046: Spike3
+    400048: Spikes
+    400050: pSphere10
+    400052: pSphere11
+    400054: pSphere4
+    400056: pSphere5
+    400058: pSphere6
+    400060: pSphere7
+    400062: pSphere8
+    400064: pSphere9
+    400066: SkullEyes
+    400068: SkullPile
+    400070: transform10
+    400072: transform11
+    400074: transform12
+    400076: transform13
+    400078: transform14
+    400080: transform15
+    400082: transform16
+    400084: transform17
+    400086: transform18
+    400088: transform19
+    400090: transform20
+    400092: transform21
+    400094: transform22
+    400096: transform23
+    400098: transform24
+    400100: transform7
+    400102: transform8
+    400104: transform9
+    2300000: pSphere3
+    2300002: pSphere3 1
+    2300004: pSphere3 2
+    2300006: pSphere3 3
+    2300008: pSphere3 4
+    2300010: pSphere3 5
+    2300012: pSphere3 6
+    2300014: pSphere3 7
+    2300016: pSphere3 8
+    2300018: Skull
+    2300020: Skull_LowPoly
+    2300022: Skull_LowPoly1
+    2300024: Skull_LowPoly2
+    2300026: Skull_LowPoly4
+    2300028: Skull_LowPoly5
+    2300030: Skull_LowPoly6
+    2300032: Skull_LowPoly7
+    2300034: Skull_LowPoly8
+    2300036: SkullBase
+    2300038: Spike1
+    2300040: Spike2
+    2300042: Spike3
+    2300044: Spikes
+    2300046: pSphere10
+    2300048: pSphere11
+    2300050: pSphere4
+    2300052: pSphere5
+    2300054: pSphere6
+    2300056: pSphere7
+    2300058: pSphere8
+    2300060: pSphere9
+    2300062: SkullEyes
+    2300064: SkullPile
+    3300000: pSphere3
+    3300002: pSphere3 1
+    3300004: pSphere3 2
+    3300006: pSphere3 3
+    3300008: pSphere3 4
+    3300010: pSphere3 5
+    3300012: pSphere3 6
+    3300014: pSphere3 7
+    3300016: pSphere3 8
+    3300018: Skull
+    3300020: Skull_LowPoly
+    3300022: Skull_LowPoly1
+    3300024: Skull_LowPoly2
+    3300026: Skull_LowPoly4
+    3300028: Skull_LowPoly5
+    3300030: Skull_LowPoly6
+    3300032: Skull_LowPoly7
+    3300034: Skull_LowPoly8
+    3300036: SkullBase
+    3300038: Spike1
+    3300040: Spike2
+    3300042: Spike3
+    3300044: Spikes
+    3300046: pSphere10
+    3300048: pSphere11
+    3300050: pSphere4
+    3300052: pSphere5
+    3300054: pSphere6
+    3300056: pSphere7
+    3300058: pSphere8
+    3300060: pSphere9
+    3300062: SkullEyes
+    3300064: SkullPile
+    4300000: Skull_LowPoly
+    4300002: pSphere3
+    4300004: Skull_LowPoly1
+    4300006: pSphere3
+    4300008: Skull_LowPoly2
+    4300010: pSphere3
+    4300012: Skull
+    4300014: pSphere3
+    4300016: Skull_LowPoly4
+    4300018: pSphere3
+    4300020: Skull_LowPoly5
+    4300022: pSphere3
+    4300024: Skull_LowPoly6
+    4300026: pSphere3
+    4300028: Skull_LowPoly7
+    4300030: pSphere3
+    4300032: Skull_LowPoly8
+    4300034: pSphere3
+    4300036: SkullBase
+    4300038: Spikes
+    4300040: Spike3
+    4300042: Spike2
+    4300044: Spike1
+    4300046: pSphere4
+    4300048: pSphere5
+    4300050: pSphere6
+    4300052: pSphere7
+    4300054: pSphere8
+    4300056: pSphere9
+    4300058: pSphere10
+    4300060: pSphere11
+    4300062: SkullPile
+    4300064: SkullEyes
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
