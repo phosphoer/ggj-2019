@@ -232,7 +232,7 @@ public class PlayerController : MonoBehaviour
     for (float timer = 0; timer < duration; timer += Time.deltaTime)
     {
       float headRoll = slapHeadRollAnim.Evaluate(timer / duration);
-      headTransform.Rotate(headRoll, headRoll * 0.5f, 0, Space.Self);
+      headTransform.Rotate(headRoll * 2, headRoll * 1.0f, 0, Space.Self);
       yield return null;
     }
   }
@@ -249,7 +249,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody rb = col.GetComponentInParent<Rigidbody>();
         if (rb != null && rb != rigidbody)
         {
-          rb.AddExplosionForce(150, heldItemRoot.position, 2.0f, 2.0f, ForceMode.Impulse);
+          rb.AddExplosionForce(150, heldItemRoot.position, 2.0f, 0.25f, ForceMode.Impulse);
 
           PlayerController player = rb.GetComponent<PlayerController>();
           if (player != null)
