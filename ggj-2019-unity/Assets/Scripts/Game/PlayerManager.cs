@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
   public static event System.Action<PlayerController> PlayerJoined;
 
   public IReadOnlyList<PlayerController> JoinedPlayers { get { return joinedPlayers; } }
+  public bool IsJoiningEnabled { get; set; }
 
   [SerializeField]
   private PlayerController[] players = null;
@@ -34,12 +35,15 @@ public class PlayerManager : MonoBehaviour
       return;
 
     // Listen for input from all players and join them when they press something
-    for (int i = 0; i < Rewired.ReInput.players.playerCount; ++i)
+    if (IsJoiningEnabled)
     {
-      Rewired.Player playerInput = Rewired.ReInput.players.GetPlayer(i);
-      if (playerInput.GetButtonDown(InputConsts.Action.Interact) && !joinedPlayerInputs.Contains(playerInput))
+      for (int i = 0; i < Rewired.ReInput.players.playerCount; ++i)
       {
-        AddPlayer(playerInput);
+        Rewired.Player playerInput = Rewired.ReInput.players.GetPlayer(i);
+        if (playerInput.GetButtonDown(InputConsts.Action.Interact) && !joinedPlayerInputs.Contains(playerInput))
+        {
+          AddPlayer(playerInput);
+        }
       }
     }
   }

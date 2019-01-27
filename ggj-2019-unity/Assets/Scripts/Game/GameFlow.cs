@@ -51,6 +51,7 @@ public class GameFlow : MonoBehaviour
     // Wait for a minimum number of players to join
     waitingForPlayersPrompt.SetActive(true);
     PlayerManager.PlayerJoined += OnPlayerJoined;
+    PlayerManager.Instance.IsJoiningEnabled = true;
     while (PlayerManager.Instance.JoinedPlayers.Count == 0)
     {
       yield return null;
@@ -74,6 +75,7 @@ public class GameFlow : MonoBehaviour
     }
 
     startGamePrompt.SetActive(false);
+    PlayerManager.Instance.IsJoiningEnabled = false;
     PlayerManager.PlayerJoined -= OnPlayerJoined;
 
     yield return null;
@@ -81,7 +83,14 @@ public class GameFlow : MonoBehaviour
 
   private IEnumerator IntroState()
   {
-    yield return null;
+    TVSlideShow[] slideShows = FindObjectsOfType<TVSlideShow>();
+    Coroutine waitRoutine = null;
+    foreach (TVSlideShow slideShow in slideShows)
+    {
+      waitRoutine = slideShow.StartSlideShow();
+    }
+
+    yield return waitRoutine;
   }
 
   private IEnumerator GameState()
