@@ -24,9 +24,7 @@ public class DecorItem : MonoBehaviour
   private DecorColor color = null;
 
   [SerializeField]
-  private new Renderer renderer = null;
-
-  private Material materialInstance;
+  private MaterialInstance materialInstance = null;
 
   private static List<DecorItem> instances = new List<DecorItem>();
 
@@ -47,12 +45,6 @@ public class DecorItem : MonoBehaviour
 
   private void UpdateMaterial()
   {
-    if (materialInstance == null)
-    {
-      materialInstance = Instantiate(renderer.sharedMaterial);
-      renderer.sharedMaterial = materialInstance;
-    }
-
-    materialInstance.SetColor("_ReplaceWithColor", color.Color);
+    materialInstance.Material.SetColor("_ReplaceWithColor", color.Color);
   }
 }

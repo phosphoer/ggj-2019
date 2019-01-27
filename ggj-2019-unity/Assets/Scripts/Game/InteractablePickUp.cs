@@ -8,7 +8,6 @@ public class InteractablePickUp : Interactable
 
   protected override void Awake()
   {
-    base.Awake();
     rigidbody = GetComponent<Rigidbody>();
     startScale = transform.localScale;
   }

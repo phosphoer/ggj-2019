@@ -5,22 +5,22 @@ public abstract class Interactable : MonoBehaviour
   public bool IsInteractable { get; protected set; } = true;
 
   [SerializeField]
-  private GameObject highlightVisual = null;
+  private MaterialInstance materialInstance = null;
 
   public abstract void TriggerInteraction(PlayerController fromPlayer);
 
   protected virtual void Awake()
   {
-    highlightVisual.SetActive(false);
+
   }
 
   public void ShowInteractPrompt(PlayerController fromPlayer)
   {
-    highlightVisual.SetActive(true);
+    materialInstance.Material.SetColor("_HighlightColor", Color.white * 0.25f);
   }
 
   public void HideInteractPrompt(PlayerController fromPlayer)
   {
-    highlightVisual.SetActive(false);
+    materialInstance.Material.SetColor("_HighlightColor", Color.black);
   }
 }
