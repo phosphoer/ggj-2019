@@ -1,78 +1,13 @@
 fileFormatVersion: 2
-guid: 6722787d26c5318489661b706b183f00
+guid: e7b26e5aa457d2241aedafe17beeef26
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: ColorBits
-    100002: HORSE
-    100004: //RootNode
-    100006: HorseBody
-    100008: HorseLegs
-    100010: HorseRocker
-    100012: polySurface10
-    100014: polySurface11
-    100016: polySurface12
-    100018: polySurface13
-    100020: polySurface14
-    100022: polySurface15
-    100024: polySurface8
-    100026: polySurface9
-    100028: transform10
-    100030: transform11
-    100032: transform12
-    100034: transform13
-    100036: transform14
-    100038: transform15
-    100040: transform7
-    100042: transform8
-    100044: transform9
-    100046: HorseRocker 1
-    100048: polySurface9 1
-    400000: ColorBits
-    400002: HORSE
-    400004: //RootNode
-    400006: HorseBody
-    400008: HorseLegs
-    400010: HorseRocker
-    400012: polySurface10
-    400014: polySurface11
-    400016: polySurface12
-    400018: polySurface13
-    400020: polySurface14
-    400022: polySurface15
-    400024: polySurface8
-    400026: polySurface9
-    400028: transform10
-    400030: transform11
-    400032: transform12
-    400034: transform13
-    400036: transform14
-    400038: transform15
-    400040: transform7
-    400042: transform8
-    400044: transform9
-    400046: HorseRocker 1
-    400048: polySurface9 1
-    2300000: ColorBits
-    2300002: HORSE
-    2300004: HorseBody
-    2300006: HorseLegs
-    2300008: HorseRocker
-    2300010: //RootNode
-    2300012: polySurface9
-    3300000: ColorBits
-    3300002: HORSE
-    3300004: HorseBody
-    3300006: HorseLegs
-    3300008: HorseRocker
-    3300010: //RootNode
-    3300012: polySurface9
-    4300000: ColorBits
-    4300002: HORSE
-    4300004: HorseBody
-    4300006: HorseLegs
-    4300008: HorseRocker
-    4300010: polySurface9
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Basketball1
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -104,7 +39,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 25
+    globalScale: 30
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
