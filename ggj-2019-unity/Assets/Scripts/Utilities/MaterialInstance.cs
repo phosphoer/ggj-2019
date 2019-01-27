@@ -17,7 +17,7 @@ public class MaterialInstance : MonoBehaviour
   }
 
   [SerializeField]
-  private Renderer renderer = null;
+  private new Renderer renderer = null;
 
   private Material materialInstance;
 

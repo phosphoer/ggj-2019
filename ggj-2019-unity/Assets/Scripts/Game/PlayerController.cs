@@ -75,8 +75,8 @@ public class PlayerController : MonoBehaviour
     rigidbody.position += moveVec * moveSpeed * Time.deltaTime;
 
     // Calculate look 
-    headTransform.Rotate(0, lookHorizontalAxis * lookSensitivity, 0, Space.World);
-    headTransform.Rotate(lookVerticalAxis * lookSensitivity, 0, 0, Space.Self);
+    headTransform.Rotate(0, lookHorizontalAxis * lookSensitivity * Time.unscaledDeltaTime, 0, Space.World);
+    headTransform.Rotate(lookVerticalAxis * lookSensitivity * Time.unscaledDeltaTime, 0, 0, Space.Self);
 
     // Clamp x rotation
     Vector3 flatForward = headTransform.forward.WithY(0).normalized;
