@@ -56,6 +56,10 @@ ModelImporter:
     100100: transform7
     100102: transform8
     100104: transform9
+    100106: Skullllls
+    100108: SkullEyes1
+    100110: platform1
+    100112: Skulls
     400000: pCylinder2
     400002: pSphere3
     400004: pSphere3 1
@@ -109,6 +113,10 @@ ModelImporter:
     400100: transform7
     400102: transform8
     400104: transform9
+    400106: Skullllls
+    400108: SkullEyes1
+    400110: platform1
+    400112: Skulls
     2300000: pSphere3
     2300002: pSphere3 1
     2300004: pSphere3 2
@@ -142,6 +150,11 @@ ModelImporter:
     2300060: pSphere9
     2300062: SkullEyes
     2300064: SkullPile
+    2300066: //RootNode
+    2300068: Skullllls
+    2300070: SkullEyes1
+    2300072: platform1
+    2300074: Skulls
     3300000: pSphere3
     3300002: pSphere3 1
     3300004: pSphere3 2
@@ -175,6 +188,11 @@ ModelImporter:
     3300060: pSphere9
     3300062: SkullEyes
     3300064: SkullPile
+    3300066: //RootNode
+    3300068: Skullllls
+    3300070: SkullEyes1
+    3300072: platform1
+    3300074: Skulls
     4300000: Skull_LowPoly
     4300002: pSphere3
     4300004: Skull_LowPoly1
@@ -208,6 +226,11 @@ ModelImporter:
     4300060: pSphere11
     4300062: SkullPile
     4300064: SkullEyes
+    4300066: polySurface51
+    4300068: Skullllls
+    4300070: SkullEyes1
+    4300072: Skulls
+    4300074: platform1
   externalObjects: {}
   materials:
     importMaterials: 0
