@@ -145,6 +145,7 @@ public class GameFlow : MonoBehaviour
       if (!warned && timer < warnAtTimeLeft)
       {
         WarningLight.TurnOn();
+        CommentaryManager.Instance.CommentaryTimeWarning();
         warned = true;
         roundTimeText.color = Color.red;
       }
@@ -164,6 +165,7 @@ public class GameFlow : MonoBehaviour
     AudioManager.Instance.FadeOutSound(gameObject, musicGame, 2.0f);
     AudioManager.Instance.FadeInSound(gameObject, musicIntro, 2.0f);
     CommentaryManager.Instance.StopCommentary();
+    CommentaryManager.Instance.CommentaryTimesUp();
 
     // Show outro 
     Coroutine waitRoutine = null;
