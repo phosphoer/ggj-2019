@@ -122,9 +122,7 @@ public class DecorEvaluator : MonoBehaviour
     // Calculate a score based on how the style matches desired 
     if (hasStyle && hasColor)
       return 3;
-    else if (hasStyle && !hasColor)
-      return 2;
-    else if (!hasStyle && hasColor)
+    else if (hasStyle != hasColor)
       return 1;
 
     return -1;

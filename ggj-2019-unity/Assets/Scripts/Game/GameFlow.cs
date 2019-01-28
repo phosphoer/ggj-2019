@@ -116,6 +116,7 @@ public class GameFlow : MonoBehaviour
   private IEnumerator GameState()
   {
     AudioManager.Instance.FadeInSound(gameObject, musicGame, 2.0f);
+    CommentaryManager.Instance.StartCommentary();
 
     // Enable everyone's controls
     foreach (PlayerController player in PlayerManager.Instance.JoinedPlayers)
@@ -162,6 +163,7 @@ public class GameFlow : MonoBehaviour
 
     AudioManager.Instance.FadeOutSound(gameObject, musicGame, 2.0f);
     AudioManager.Instance.FadeInSound(gameObject, musicIntro, 2.0f);
+    CommentaryManager.Instance.StopCommentary();
 
     // Show outro 
     Coroutine waitRoutine = null;
