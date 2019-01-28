@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a304fc70ef8047e682c3deb848e11e6, type: 3}
+  m_Name: SFX_Comm_TimeAlmostUp
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: 20eda964c05275e408e983773767af27, type: 3}
+  - {fileID: 8300000, guid: 09f295b3471f1e549b4478b06ae2baf8, type: 3}
+  - {fileID: 8300000, guid: 0a3e16fa9fd82804ca1a1cbee01a1c6c, type: 3}
+  - {fileID: 8300000, guid: 15af5b239e4d4c94194949898e19e1af, type: 3}
+  - {fileID: 8300000, guid: 99e35eb36e795174d8e61918d905d52f, type: 3}
+  - {fileID: 8300000, guid: f71dab57e98f43f42bc236029c9e6a93, type: 3}
+  - {fileID: 8300000, guid: e2bc72d58767d36499751cd842531485, type: 3}
+  - {fileID: 8300000, guid: ad7ef948499bd83439718957e8c2184d, type: 3}
+  - {fileID: 8300000, guid: e594e52bab59c864bb3b32acc5208fe7, type: 3}
+  - {fileID: 8300000, guid: 2984c83be58032f45a6884d77bc2225d, type: 3}
+  IsSpatial: 0
+  MaxDistance: 100
+  MinDistance: 10
+  VolumeScale: 0.5
+  PitchOffsetRange:
+    MinValue: -0.2
+    MaxValue: 0.2
+  IsLooping: 0
+  AudioMixerGroup: {fileID: 0}

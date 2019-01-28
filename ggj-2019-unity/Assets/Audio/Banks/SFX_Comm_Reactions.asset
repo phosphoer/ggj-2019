@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a304fc70ef8047e682c3deb848e11e6, type: 3}
+  m_Name: SFX_Comm_Reactions
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: eaf9674a22ad9ab46b4339c0f68b5daa, type: 3}
+  - {fileID: 8300000, guid: 46fb885f29cc7174e850e89e1f3415db, type: 3}
+  - {fileID: 8300000, guid: 6b300589cc5c1644eaa3deb58fdbc92d, type: 3}
+  - {fileID: 8300000, guid: ab6bc295629655542aba970da9b3889d, type: 3}
+  - {fileID: 8300000, guid: b01215a475b0dd84f96819596319e4bb, type: 3}
+  - {fileID: 8300000, guid: d229ec3191a1937499c5ca5f412eb068, type: 3}
+  - {fileID: 8300000, guid: 1936ad97f214ec046abbe800ee4cbde1, type: 3}
+  - {fileID: 8300000, guid: cb471b418ccaeef4cb70f344f43e922a, type: 3}
+  - {fileID: 8300000, guid: bb82ff8c7656e264d8412655dcbac608, type: 3}
+  - {fileID: 8300000, guid: 6f9928c081736bb4dac6e00706575bdf, type: 3}
+  - {fileID: 8300000, guid: c41d4d64f50d1a74d9f51d5319fcb475, type: 3}
+  - {fileID: 8300000, guid: 068c0ccc4e37c384caca303fa917f3dd, type: 3}
+  - {fileID: 8300000, guid: f204da18c91d9d941abccdd53dc211be, type: 3}
+  - {fileID: 8300000, guid: a5436290e4fdd584b97d9bb66a5d6e48, type: 3}
+  - {fileID: 8300000, guid: 41553acfb86701c43b49ded434149efc, type: 3}
+  - {fileID: 8300000, guid: 2818f560ea80e9a4786952ee09adb17d, type: 3}
+  - {fileID: 8300000, guid: e62a7e512cffdaf408c56fd6ea6c05d2, type: 3}
+  - {fileID: 8300000, guid: ae3b205ceb54b9c49a58039bdadcfe6e, type: 3}
+  - {fileID: 8300000, guid: 84345390f7911c24a81ada0df9bfdc1f, type: 3}
+  - {fileID: 8300000, guid: b98f57a62dc226a4f85cf98f3c329d1e, type: 3}
+  - {fileID: 8300000, guid: 07e5a1f289c994b4b946345fa0656675, type: 3}
+  - {fileID: 8300000, guid: cad3b653efb2d5a4e806530959b4d890, type: 3}
+  - {fileID: 8300000, guid: ac1d8e3b15fa96047bfc9f6b5804d4e1, type: 3}
+  - {fileID: 8300000, guid: 9d122867374077248948002d86d96113, type: 3}
+  - {fileID: 8300000, guid: 8ad3c1e8a566eb94fb3b2f54c0a7b9ee, type: 3}
+  IsSpatial: 0
+  MaxDistance: 100
+  MinDistance: 10
+  VolumeScale: 0.5
+  PitchOffsetRange:
+    MinValue: -0.2
+    MaxValue: 0.2
+  IsLooping: 0
+  AudioMixerGroup: {fileID: 0}
