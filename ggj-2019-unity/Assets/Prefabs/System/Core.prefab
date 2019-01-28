@@ -128,10 +128,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b04edfa406dc4606a2a3bfedd3eb6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  genericSoundByte: {fileID: 0}
-  genericCommentaryTiming:
-    MinValue: 10
-    MaxValue: 20
+  introSoundByte: {fileID: 11400000, guid: 4a7aaa1d93ddf704eb14a5657d8e1f82, type: 2}
+  reactionSoundByte: {fileID: 11400000, guid: 2c39efd59a3a56a49bf069df265812db, type: 2}
+  timeWarningSoundByte: {fileID: 11400000, guid: 21f6ad859b967054ebd96de1c5bb9e15,
+    type: 2}
+  timesUpSoundByte: {fileID: 11400000, guid: e38a44771294af64daf5d917e1f89fdc, type: 2}
 --- !u!1 &5503367404583025402
 GameObject:
   m_ObjectHideFlags: 0

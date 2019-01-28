@@ -17,9 +17,10 @@ MonoBehaviour:
   IsSpatial: 0
   MaxDistance: 100
   MinDistance: 10
-  VolumeScale: 0.6
+  VolumeScale: 0.5
   PitchOffsetRange:
     MinValue: 0
     MaxValue: 0
   IsLooping: 1
-  AudioMixerGroup: {fileID: 0}
+  AudioMixerGroup: {fileID: 243709110757585724, guid: bf4f4e8e469fa489691dda40b79526ba,
+    type: 2}

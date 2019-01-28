@@ -212,7 +212,7 @@ public class PlayerController : MonoBehaviour
     GameObject slapFx = Instantiate(fxSlapPrefab);
     slapFx.transform.position = headTransform.position;
 
-    CommentaryManager.Instance.CommentarySlap();
+    CommentaryManager.Instance.CommentaryReaction();
   }
 
   private void SetFocusedInteractable(Interactable interactable)
