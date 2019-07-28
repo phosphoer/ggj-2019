@@ -13,16 +13,14 @@ MonoBehaviour:
   m_Name: SFX_Comm_TimeUp
   m_EditorClassIdentifier: 
   AudioClips:
-  - {fileID: 8300000, guid: 20eda964c05275e408e983773767af27, type: 3}
-  - {fileID: 8300000, guid: 09f295b3471f1e549b4478b06ae2baf8, type: 3}
-  - {fileID: 8300000, guid: 0a3e16fa9fd82804ca1a1cbee01a1c6c, type: 3}
-  - {fileID: 8300000, guid: 15af5b239e4d4c94194949898e19e1af, type: 3}
-  - {fileID: 8300000, guid: 99e35eb36e795174d8e61918d905d52f, type: 3}
-  - {fileID: 8300000, guid: f71dab57e98f43f42bc236029c9e6a93, type: 3}
-  - {fileID: 8300000, guid: e2bc72d58767d36499751cd842531485, type: 3}
-  - {fileID: 8300000, guid: ad7ef948499bd83439718957e8c2184d, type: 3}
-  - {fileID: 8300000, guid: e594e52bab59c864bb3b32acc5208fe7, type: 3}
-  - {fileID: 8300000, guid: 2984c83be58032f45a6884d77bc2225d, type: 3}
+  - {fileID: 8300000, guid: e1fa06a7e31e2ed4c915210273525f8a, type: 3}
+  - {fileID: 8300000, guid: a09a08de626b7f849af15f5de13ff9d3, type: 3}
+  - {fileID: 8300000, guid: 411669bf39d1f474f886683d999f418e, type: 3}
+  - {fileID: 8300000, guid: 9aeeec2b657bf3b469477d8d3a25bb0a, type: 3}
+  - {fileID: 8300000, guid: cb1184f78fefc024d96db6332f12c3c2, type: 3}
+  - {fileID: 8300000, guid: c5338a0e34e41904aa43a6b9481d216b, type: 3}
+  - {fileID: 8300000, guid: 2b56268606ae21e4e98f1602c7996372, type: 3}
+  - {fileID: 8300000, guid: 6ea6cbecb82fa7b43b3a4ae5ac943bb3, type: 3}
   IsSpatial: 0
   MaxDistance: 100
   MinDistance: 10
