@@ -98,10 +98,11 @@ public class TVSlideShow : MonoBehaviour
     foreach (Transform slideShowItem in slidesRoot)
     {
       slideShowItem.gameObject.SetActive(true);
+      bool canSkip = !slideShowItem.name.Contains("NO_SKIP");
 
       for (float timer = 0; timer < slideTiming; timer += Time.deltaTime)
       {
-        if (PlayerManager.Instance.IsAnyPlayerPressingButton())
+        if (canSkip && PlayerManager.Instance.IsAnyPlayerPressingButton())
         {
           timer = slideTiming;
         }

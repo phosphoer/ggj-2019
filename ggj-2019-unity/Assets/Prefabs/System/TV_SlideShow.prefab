@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 8083148508334192997}
   - component: {fileID: 8568758751086291638}
   m_Layer: 5
-  m_Name: Slide3
+  m_Name: Slide3 NO_SKIP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1805,7 +1805,7 @@ MonoBehaviour:
     lineCount: 5
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -1864,7 +1864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -134.806, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -9.813, y: 17.512}
+  m_AnchoredPosition: {x: -9.812988, y: 17.512024}
   m_SizeDelta: {x: 500, y: 370.0448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5157570483398074330
@@ -3185,7 +3185,7 @@ MonoBehaviour:
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 0
   m_inputSource: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
