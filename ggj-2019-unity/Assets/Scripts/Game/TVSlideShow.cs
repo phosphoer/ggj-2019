@@ -51,6 +51,11 @@ public class TVSlideShow : MonoBehaviour
     gameObject.SetActive(false);
   }
 
+  private void OnDestroy()
+  {
+    instances.Remove(this);
+  }
+
   public Coroutine StartIntroSlides()
   {
     gameObject.SetActive(true);
