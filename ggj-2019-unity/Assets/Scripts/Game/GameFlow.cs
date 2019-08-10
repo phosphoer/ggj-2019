@@ -160,6 +160,7 @@ public class GameFlow : MonoBehaviour
     foreach (PlayerController player in PlayerManager.Instance.JoinedPlayers)
     {
       player.ControlsEnabled = false;
+      player.DropHeldItem();
       player.ResetToStartPosition();
     }
 
