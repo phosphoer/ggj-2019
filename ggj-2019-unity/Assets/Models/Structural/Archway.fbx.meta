@@ -4,10 +4,20 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Arch
+    100004: Pillars
     400000: //RootNode
+    400002: Arch
+    400004: Pillars
     2300000: //RootNode
+    2300002: Arch
+    2300004: Pillars
     3300000: //RootNode
+    3300002: Arch
+    3300004: Pillars
     4300000: pCube1
+    4300002: Arch
+    4300004: Pillars
   externalObjects: {}
   materials:
     importMaterials: 0
