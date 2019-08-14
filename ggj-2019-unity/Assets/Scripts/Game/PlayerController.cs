@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour
   private Transform headTransform = null;
 
   [SerializeField]
+  private GameObject normalHead = null;
+  
+  [SerializeField]
+  private GameObject alternateHead = null;
+
+  [SerializeField]
   private Transform heldItemRoot = null;
 
   [SerializeField]
@@ -50,6 +56,9 @@ public class PlayerController : MonoBehaviour
 
   [SerializeField]
   private GameObject fxSlapPrefab = null;
+  
+  [SerializeField]
+  private GameObject fxHeartPrefab = null;
 
   [SerializeField]
   private SoundBank sfxSlap = null;
@@ -92,6 +101,7 @@ public class PlayerController : MonoBehaviour
     float lookHorizontalAxis = playerInput.GetAxis(InputConsts.Action.LookHorizontal);
     float lookVerticalAxis = -playerInput.GetAxis(InputConsts.Action.LookVertical);
     bool isInteractPressed = playerInput.GetButtonDown(InputConsts.Action.Interact);
+	bool isSelectPressed = playerInput.GetButtonDown(InputConsts.Action.Select);
 
     // Calculate movement
     Vector3 walkDirection = headTransform.forward.WithY(0).normalized;
@@ -119,6 +129,15 @@ public class PlayerController : MonoBehaviour
       isSlapCancelled = false;
       animator.SetTrigger("Hit");
       StartCoroutine(SlapAnim());
+    }
+	
+	//Hacking in a way to swap HOOD head for SECRET SUDA head (sorry for the slop!)
+	if (isSelectPressed && alternateHead != null && normalHead.activeSelf)
+    {
+		normalHead.SetActive(false);
+		alternateHead.SetActive(true);
+		GameObject heartFx = Instantiate(fxHeartPrefab);
+		heartFx.transform.position = headTransform.position;
     }
 
     animator.SetBool("IsWalking", moveVec.sqrMagnitude > 0.1f);

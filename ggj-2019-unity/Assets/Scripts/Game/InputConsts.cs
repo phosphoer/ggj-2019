@@ -22,5 +22,7 @@ namespace InputConsts {
         public const int Interact = 4;
         [Rewired.Dev.ActionIdFieldInfo(categoryName = "Default", friendlyName = "Start")]
         public const int Start = 5;
+		[Rewired.Dev.ActionIdFieldInfo(categoryName = "Default", friendlyName = "Select")]
+        public const int Select = 6;
     }
 }
