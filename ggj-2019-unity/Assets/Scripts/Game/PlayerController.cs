@@ -35,9 +35,15 @@ public class PlayerController : MonoBehaviour
 
   [SerializeField]
   private Animator animator = null;
-
+  
   [SerializeField]
   private float moveSpeed = 1;
+  
+  [SerializeField]
+  private float moveSpeedReg = 1;
+
+  [SerializeField]
+  private float moveSpeedDash = 1;
 
   [SerializeField]
   private float lookSensitivity = 1;
@@ -109,7 +115,7 @@ public class PlayerController : MonoBehaviour
     Vector3 moveVec = (walkDirection * walkAxis + strafeDirection * strafeAxis).normalized;
     rigidbody.position += moveVec * moveSpeed * Time.deltaTime;
 
-    // Calculate look 
+    // Calculate look
     headTransform.Rotate(0, lookHorizontalAxis * lookSensitivity * Time.unscaledDeltaTime, 0, Space.World);
     headTransform.Rotate(lookVerticalAxis * lookSensitivity * Time.unscaledDeltaTime, 0, 0, Space.Self);
 
@@ -131,7 +137,7 @@ public class PlayerController : MonoBehaviour
       StartCoroutine(SlapAnim());
     }
 	
-	//Hacking in a way to swap HOOD head for SECRET SUDA head (sorry for the slop!)
+	//Hacking in a way to swap *HOOD* head for *SECRET SUDA* head (sorry for the slop!)
 	if (isSelectPressed && alternateHead != null && normalHead.activeSelf)
     {
 		normalHead.SetActive(false);
@@ -185,7 +191,14 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(PutDownAnim());
         isSlapCancelled = true;
       }
-    }
+	  
+	  //Experimenting with changing moveSpeed when carrying / not carrying items
+	  moveSpeed = moveSpeedReg;
+	} 
+	  else
+	{
+		moveSpeed = moveSpeedDash;
+	}
   }
 
   public void ResetToStartPosition()
