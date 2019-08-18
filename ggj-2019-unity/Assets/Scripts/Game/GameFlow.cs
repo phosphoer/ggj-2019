@@ -161,7 +161,7 @@ public class GameFlow : MonoBehaviour
     {
       player.ControlsEnabled = false;
       player.DropHeldItem();
-      player.ResetToStartPosition();
+      player.ResetToFakeStartPosition();
     }
 
     AudioManager.Instance.FadeOutSound(gameObject, musicGame, 2.0f);

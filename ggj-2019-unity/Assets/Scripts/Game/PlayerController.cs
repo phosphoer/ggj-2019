@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
   public Camera WorldCamera => playerCameraWorld;
   public Camera ViewportCamera => playerCameraViewport;
   public bool ControlsEnabled { get; set; }
+  
+  public Transform fakeRoomSpot;
 
   [SerializeField]
   private Transform headTransform = null;
@@ -78,6 +80,7 @@ public class PlayerController : MonoBehaviour
   private InteractablePickUp heldItem;
   private Transform heldItemOriginalParent;
   private Vector3 startPosition;
+  private Vector3 endPosition;
   private Quaternion startRotation;
   private Quaternion startHeadRotation;
   private bool isSlapCancelled;
@@ -92,6 +95,7 @@ public class PlayerController : MonoBehaviour
     startPosition = transform.position;
     startRotation = transform.rotation;
     startHeadRotation = headTransform.rotation;
+	endPosition = fakeRoomSpot.position;
   }
 
   private void Update()
@@ -201,9 +205,11 @@ public class PlayerController : MonoBehaviour
 	}
   }
 
-  public void ResetToStartPosition()
+  public void ResetToFakeStartPosition()
   {
-    transform.SetPositionAndRotation(startPosition, startRotation);
+	this.rigidbody.velocity = Vector3.zero;
+	this.rigidbody.angularVelocity = Vector3.zero;
+    transform.SetPositionAndRotation(endPosition, startRotation);
     headTransform.rotation = startHeadRotation;
   }
 

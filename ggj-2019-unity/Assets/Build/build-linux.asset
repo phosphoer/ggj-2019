@@ -15,7 +15,7 @@ MonoBehaviour:
   LocationPathName: ../build/deco-dash-linux/deco-dash
   ProductNameOverride: 
   CompanyNameOverride: 
-  BuildTarget: 19
+  BuildTarget: 17
   BuildTargetGroup: 1
   Scenes:
   - sceneAsset: {fileID: 102900000, guid: 9f4e1b37450a9e04a8674256d73755a2, type: 3}
